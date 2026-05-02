@@ -18,6 +18,7 @@ plugins:
   - jekyll-feed
 
 # SEO
+google_site_verification: qaGoizzjp-2vpJNR9OiKhuJyZX5HFRIBlr03c_4I1g4
 twitter:
   username: bridle_dev
   card: summary_large_image
