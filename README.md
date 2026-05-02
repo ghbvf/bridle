@@ -130,6 +130,12 @@ AI 编码已经把生产端边际成本压到接近零，但人类审查能力�
 
 ➡️ **[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[Open English → `deck/en/index.html`](./deck/en/index.html)**
 
+#### 🏭 v8 (WIP) · 工厂母隐喻 · 反哺循环
+
+> 12 页 · 极致压缩 · 单一母隐喻贯穿 · 融入反哺循环 / 多 agent / 模块即商品 / 审查方演化
+
+➡️ **[预览 v8 → `deck-v8/index.html`](./deck-v8/index.html)** （目前仅 02 样板页完成 · 其他页待用户确认风格后批量生成）
+
 ---
 
 ### 🛠️ 立即可用的范例 · Drop-in Examples
