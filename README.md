@@ -97,22 +97,40 @@ AI 编码已经把生产端边际成本压到接近零，但人类审查能力�
 
 ---
 
-## 文档地图
+## 📚 文档地图
 
-| 文档 | 适合读者 | 内容 |
-|---|---|---|
-| [`three-leaps.md`](./three-leaps.md) | 主方法论读者 | 16 章 / 三层 × 三跃迁 / 4 篇附录 |
-| [`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md) | greenfield 起步项目 | 35 项能力 → L0/L1/L2/L3 跃迁映射 |
-| [`deck/index.html`](./deck/index.html) | 想要可视化总览 | 15 页配套幻灯片 · 订单团购案例贯穿 |
-| [`three-leaps.pdf`](./three-leaps.pdf) | 离线 / 打印 / 分享 | 配套幻灯片的 PDF 导出（3.5 MB · 15 页） |
-| [`archive/v3.md`](./archive/v3.md) | 想看推理细节 | 旧版本 · 七视角×四阶段 · 已归档 |
-| [`archive/v3-bootstrap.md`](./archive/v3-bootstrap.md) | 想看原始 P0-P7 表述 | 旧版本 bootstrap · 已归档 |
+### 📖 主方法论 · Main Methodology
 
-**阅读顺序**：
+> 16 章 · 三层 × 三跃迁 · 4 篇附录 · 第一性原理推导
 
-- 已有 L0 基础 → 直接读 [`three-leaps.md`](./three-leaps.md)
-- greenfield 起步 → [`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md) 走通 35 能力 → 进入主方法论 §11 全景闭环
-- 想要 30 分钟读完 → 在浏览器打开 [`deck/index.html`](./deck/index.html)
+➡️ **[阅读中文版 → `three-leaps.md`](./three-leaps.md)**　|　**[Read English → `three-leaps.en.md`](./three-leaps.en.md)**
+
+---
+
+### 🚀 起步手册 · Bootstrap Handbook
+
+> 35 项能力 · 从零仓库到 L3 自治 · 映射到 L0/L1/L2/L3 跃迁
+
+➡️ **[阅读中文版 → `three-leaps-bootstrap.md`](./three-leaps-bootstrap.md)**　|　**[Read English → `three-leaps-bootstrap.en.md`](./three-leaps-bootstrap.en.md)**
+
+---
+
+### 🎬 配套幻灯片 · Slide Deck
+
+> 15 页 · 订单团购案例贯穿全程 · 1920×1080 keynote
+
+➡️ **[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[Open English → `deck/en/index.html`](./deck/en/index.html)**　|　**[📄 PDF (3.5 MB)](./three-leaps.pdf)**
+
+---
+
+### 🧭 阅读顺序
+
+| 你的情况 | 推荐路径 |
+|---|---|
+| 已有 L0 基础 | 直接读 **主方法论** |
+| 想要 30 分钟速览 | 浏览器打开 **配套幻灯片** |
+| greenfield 起步项目 | **起步手册** 走通 35 能力 → 进入主方法论 §11 全景闭环 |
+| 离线 / 打印 / 分享 | 下载 **PDF** |
 
 ---
 
@@ -255,22 +273,40 @@ See [`three-leaps.md`](./three-leaps.md) §3 for the first-principles derivation
 
 ---
 
-## Document Map
+## 📚 Document Map
 
-| Document | Audience | Content |
-|---|---|---|
-| [`three-leaps.en.md`](./three-leaps.en.md) | Main methodology readers | 16 chapters · 3 layers × 3 leaps · 4 appendices |
-| [`three-leaps-bootstrap.en.md`](./three-leaps-bootstrap.en.md) | Greenfield projects | 35 capabilities mapped to L0/L1/L2/L3 |
-| [`deck/en/index.html`](./deck/en/index.html) | Want a visual overview | 15-page slide deck with order-service group-buy case |
-| [`three-leaps.pdf`](./three-leaps.pdf) | Offline / print / share | PDF export of the slide deck (3.5 MB · 15 pages) |
-| [`archive/v3.md`](./archive/v3.md) | Want derivation details | Older version · seven-lens × four-phase · archived |
-| [`archive/v3-bootstrap.md`](./archive/v3-bootstrap.md) | Want original P0–P7 framing | Older bootstrap · archived |
+### 📖 Main Methodology
 
-**Reading order**:
+> 16 chapters · 3 layers × 3 leaps · 4 appendices · derived from first principles
 
-- Already have L0 in place → go straight to [`three-leaps.md`](./three-leaps.md)
-- Starting from zero → walk through [`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md), then enter §11 of the main methodology
-- Want a 30-minute overview → open [`deck/index.html`](./deck/index.html) in a browser
+➡️ **[Read English → `three-leaps.en.md`](./three-leaps.en.md)**　|　**[阅读中文版 → `three-leaps.md`](./three-leaps.md)**
+
+---
+
+### 🚀 Bootstrap Handbook
+
+> 35 capabilities · from zero repo to L3 autonomy · mapped to L0/L1/L2/L3 leaps
+
+➡️ **[Read English → `three-leaps-bootstrap.en.md`](./three-leaps-bootstrap.en.md)**　|　**[阅读中文版 → `three-leaps-bootstrap.md`](./three-leaps-bootstrap.md)**
+
+---
+
+### 🎬 Slide Deck
+
+> 15 pages · order-service group-buy case throughout · 1920×1080 keynote
+
+➡️ **[Open English → `deck/en/index.html`](./deck/en/index.html)**　|　**[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[📄 PDF (3.5 MB)](./three-leaps.pdf)**
+
+---
+
+### 🧭 Reading order
+
+| Your situation | Recommended path |
+|---|---|
+| Already have L0 in place | Read the **main methodology** directly |
+| Want a 30-minute overview | Open the **slide deck** in a browser |
+| Greenfield project starting from zero | Walk through the **bootstrap handbook**'s 35 capabilities, then §11 of the main methodology |
+| Offline / print / share | Download the **PDF** |
 
 ---
 

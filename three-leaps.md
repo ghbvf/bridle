@@ -1137,16 +1137,11 @@ V-model 在 AI 时代的本质重写：**左侧编码价值 → 右侧验证价�
 
 ---
 
-## 文档版本
+## 相关文档
 
-| 版本 | 日期 | 主要变化 |
-|---|---|---|
-| v3 | 2026-05 | 七视角融合 / 四阶段路径 — 已归档 [`archive/v3.md`](./archive/v3.md) |
-| v7 | 2026-05 | 三层引力梯度 × 三跃迁 — 当前版本（本文档） |
-
-配套幻灯片：[`deck/index.html`](./deck/index.html)
-
-零基础起步：[`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md)
+- 配套幻灯片：[`deck/index.html`](./deck/index.html)
+- 零基础起步：[`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md)
+- English version: [`three-leaps.en.md`](./three-leaps.en.md)
 
 ---
 

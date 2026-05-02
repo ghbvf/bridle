@@ -1148,16 +1148,11 @@ This is the deepest paradigm leap from v3 to v7 — governance shifts from "huma
 
 ---
 
-## Document version
+## Related documents
 
-| Version | Date | Major change |
-|---|---|---|
-| v3 | 2026-05 | Seven-lens / four-phase — archived in [`archive/v3.md`](./archive/v3.md) |
-| v7 | 2026-05 | Three layers × three leaps — current version (this document) |
-
-Companion deck: [`deck/index.html`](./deck/index.html)
-
-Zero-to-L3 bootstrap: [`three-leaps-bootstrap.en.md`](./three-leaps-bootstrap.en.md)
+- Companion deck: [`deck/en/index.html`](./deck/en/index.html)
+- Bootstrap handbook: [`three-leaps-bootstrap.en.md`](./three-leaps-bootstrap.en.md)
+- 中文版: [`three-leaps.md`](./three-leaps.md)
 
 ---
 

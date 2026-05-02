@@ -621,8 +621,7 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
 
 - [主方法论 · three-leaps.md](./three-leaps.md)
 - [配套幻灯片 · deck/index.html](./deck/index.html)
-- [v3 原始版本（已归档）· archive/v3.md](./archive/v3.md)
-- [v3-bootstrap 原始版本（已归档）· archive/v3-bootstrap.md](./archive/v3-bootstrap.md)
+- English version: [three-leaps-bootstrap.en.md](./three-leaps-bootstrap.en.md)
 - [Anthropic Harness 五件套](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [DORA 官方报告](https://dora.dev/)
 - [Apache DevLake](https://devlake.apache.org/)

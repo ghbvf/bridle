@@ -623,9 +623,8 @@ This handbook remains **exploratory** and must accept practical critique:
 ## Related documents
 
 - [Main methodology · three-leaps.en.md](./three-leaps.en.md)
-- [Companion deck · deck/index.html](./deck/index.html)
-- [v3 original (archived) · archive/v3.md](./archive/v3.md)
-- [v3-bootstrap original (archived) · archive/v3-bootstrap.md](./archive/v3-bootstrap.md)
+- [Companion deck · deck/en/index.html](./deck/en/index.html)
+- 中文版: [three-leaps-bootstrap.md](./three-leaps-bootstrap.md)
 - [Anthropic · Effective Harnesses for Long-Running Agents](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents)
 - [DORA · State of DevOps Report](https://dora.dev/)
 - [Apache DevLake](https://devlake.apache.org/)
