@@ -10,13 +10,22 @@ keywords: AI coding governance, Harness engineering, autonomy gradient, declarat
 
 # Bridle · 驭码
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+[![Docs](https://img.shields.io/badge/📚_docs-ghbvf.github.io%2Fbridle-blue)](https://ghbvf.github.io/bridle/)
+[![Stars](https://img.shields.io/github/stars/ghbvf/bridle?style=social)](https://github.com/ghbvf/bridle/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/ghbvf/bridle?color=informational)](https://github.com/ghbvf/bridle/commits/main)
+[![AI-generated](https://img.shields.io/badge/AI--generated-Claude-7b3fe4)](#%EF%B8%8F-ai-生成免责声明)
+[![Bilingual](https://img.shields.io/badge/lang-中文_·_English-green)](#english)
+
 > **持缰而非持鞭** —— 在框架与 Harness 约束下，让 AI 自由奔驰而不脱缰。
 >
 > *Hold the reins, not the whip — let AI run free within the framework and harness.*
 
+**Bridle** is an **AI coding governance methodology** for the era of **AI agents** (Claude, Claude Code, Cursor, GitHub Copilot, autonomous coding agents) — engineered around the **Harness Five-Pack**, **declarative manifests**, **reconciliation loops**, and an **R0–R5 reversibility gradient** that lets AI take over reversible actions while keeping humans in charge of irreversible ones. Three layers (L0 gravity field · L1 state visible · L2 intent expressible · L3 autonomous loop), three leaps, six tiers, one running case (order service supports group-buy).
+
 Bridle 是一套面向 **AI 编码时代**的工程化治理方法论。它不试图限制 AI 的产能，而是为 AI 装上**可控的缰绳**：用框架锚定边界、用声明式 manifest 管理生命周期、用 Harness 工程让渡可逆的自主权。
 
-当前版本：**v7 · 三跃迁**（Three Leaps）。
+当前版本：**v7 · 三跃迁**（Three Leaps · MIT License · Bilingual zh/en）。
 
 ---
 
@@ -120,6 +129,21 @@ AI 编码已经把生产端边际成本压到接近零，但人类审查能力�
 > 15 页 · 订单团购案例贯穿全程 · 1920×1080 keynote
 
 ➡️ **[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[Open English → `deck/en/index.html`](./deck/en/index.html)**　|　**[📄 PDF (3.5 MB)](./three-leaps.pdf)**
+
+---
+
+### 🛠️ 立即可用的范例 · Drop-in Examples
+
+> 直接拷到你项目里改名即可的 4 个核心 artifact
+
+| 文件 | 层级 | 说明 |
+|---|---|---|
+| [`examples/module.yaml`](./examples/module.yaml) | L1 入口 | 模块身份 / 契约 / lifecycle / 信号 |
+| [`examples/intent.yaml`](./examples/intent.yaml) | L2 跃迁② | 意图声明 4 块结构 |
+| [`examples/reconciler.py`](./examples/reconciler.py) | L3 跃迁③ | reconciliation loop + R0-R5 路由参考实现 |
+| [`examples/CLAUDE.md`](./examples/CLAUDE.md) | L3 Harness | AI agent 系统上下文 / Harness 五件套之一 |
+
+➡️ **[查看 examples/ 目录](./examples/)**
 
 ---
 
@@ -296,6 +320,21 @@ See [`three-leaps.md`](./three-leaps.md) §3 for the first-principles derivation
 > 15 pages · order-service group-buy case throughout · 1920×1080 keynote
 
 ➡️ **[Open English → `deck/en/index.html`](./deck/en/index.html)**　|　**[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[📄 PDF (3.5 MB)](./three-leaps.pdf)**
+
+---
+
+### 🛠️ Drop-in Examples
+
+> 4 ready-to-copy artifacts — paste into your repo, rename, ship
+
+| File | Layer | Purpose |
+|---|---|---|
+| [`examples/module.yaml`](./examples/module.yaml) | L1 entry | Module identity / contracts / lifecycle / signals |
+| [`examples/intent.yaml`](./examples/intent.yaml) | L2 leap ② | Intent declaration · 4-block structure |
+| [`examples/reconciler.py`](./examples/reconciler.py) | L3 leap ③ | Reference reconciliation loop with R0–R5 routing |
+| [`examples/CLAUDE.md`](./examples/CLAUDE.md) | L3 Harness | AI agent system context · 1 of the Harness Five-Pack |
+
+➡️ **[Browse examples/ →](./examples/)**
 
 ---
 

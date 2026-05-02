@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: "Bridle: AI Coding Governance Methodology"
+message: "If you reference this methodology, please cite it as below."
+type: software
+authors:
+  - alias: ghbvf
+    family-names: ghbvf
+    affiliation: Bridle Project
+repository-code: "https://github.com/ghbvf/bridle"
+url: "https://ghbvf.github.io/bridle/"
+abstract: >-
+  Bridle is an engineering governance methodology for the AI-coding era,
+  built on three architectural layers (L0 gravity field, L1 state visible,
+  L2 intent expressible, L3 autonomous loop) and three paradigm leaps,
+  with a six-tier reversibility gradient (R0-R5) that delegates
+  reversible actions to AI agents while keeping humans in charge of
+  irreversible ones. Integrates the Harness Five-Pack, declarative
+  manifests, reconciliation loops, and DORA measurement — letting AI
+  code autonomously without losing the organization's grip on its assets.
+keywords:
+  - AI coding governance
+  - autonomous agents
+  - Harness engineering
+  - declarative manifest
+  - reconciliation
+  - reversibility gradient
+  - DORA
+  - software architecture
+  - LLM engineering
+license: MIT
+version: "7.0.0"
+date-released: 2026-05-02

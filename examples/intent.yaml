@@ -1,0 +1,70 @@
+# Bridle intent file example · L2 Intent Expressible
+#
+# An `intent.yaml` is the desired-state declaration that the L3
+# reconciliation loop drives toward. Four blocks: business / contract /
+# quality / lifecycle. Every field must map to an executable verifier.
+#
+# Replaces: PRD doc + scheduling meeting + Jira ticket
+#
+# See: three-leaps.md §7 (Leap ② Intent Expressible)
+#      three-leaps.md §7.3 (Field-to-verifier binding)
+
+intent_id: INT-2026-001
+target_module: order-service.group-buy
+
+# 01 · BUSINESS
+business:
+  goal: "Support group-buy ordering with coupon-code payment"
+  metric:
+    name: GMV
+    direction: up
+    target: "+15%"
+    measure_window: "30d after launch"
+  deadline: 2026-Q2
+  stakeholders:
+    - product: alice@example.com
+    - tech_lead: bob@example.com
+
+# 02 · CONTRACT (technical contract)
+contract:
+  api:
+    method: POST
+    path: /orders/group
+    schema: schemas/GroupOrder.json
+  events:
+    emit: [GroupCreated, GroupSettled]
+    listen: [PaymentSucceeded]
+  depends_on:
+    - module: payment.coupon
+      min_health: 85
+      version_range: ">=2.0,<3.0"
+
+# 03 · QUALITY (thresholds bound to verifiers)
+quality:
+  performance:
+    p99_latency_ms: 200       # → k6 perf test, regression fails
+    error_rate_max: 0.005     # → SLO burn alert
+  testing:
+    coverage_new_code: ">= 95%"   # → Codecov gate
+    contract_test: required        # → pact / openapi diff
+  security:
+    sast_high_severity: 0     # → CodeQL + Semgrep
+    secrets_in_code: 0        # → gitleaks
+
+# 04 · LIFECYCLE (declarative state management)
+lifecycle:
+  initial_state: candidate
+  promotion_rule:
+    candidate_to_asset:
+      requires:
+        - "all_quality_gates_green for 7d"
+        - "human_review_passed"
+  sunset_if: "signals.usage < 100/d for 14d"
+  review_at: "+30d"
+  reversibility_max: R3       # caps what the AI agent may auto-act on
+
+# Reconciliation behavior (L3)
+reconciliation:
+  cadence: 30m
+  on_drift: propose_pr        # propose_pr | auto_apply | block_and_alert
+  audit_to: docs/agent-decisions/

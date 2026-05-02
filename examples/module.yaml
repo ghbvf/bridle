@@ -1,0 +1,67 @@
+# Bridle module manifest example · L1 State Visible
+#
+# Drop one `module.yaml` into every module directory. CI must validate
+# against schema/module.schema.json. Without manifests, AI agents cannot
+# mechanically judge module health, lifecycle state, or boundary
+# violations — the L1 leap is impossible.
+#
+# See: three-leaps.md §5 (Leap ① State Visible)
+#      three-leaps.md §4.2 (Module identity in L0)
+
+module:
+  name: order-service.group-buy
+  domain: order
+  owner: order-team
+  repo: github.com/example/order-service
+
+intent:
+  intent_id: INT-2026-001
+  goal: "Support group-buy ordering with coupon-code payment"
+  metric: "GMV ↑ 15%"
+  deadline: 2026-Q2
+
+contracts:
+  exposed:
+    - name: GroupOrder
+      type: REST
+      version: v1
+      path: POST /orders/group
+    - name: GroupCreated
+      type: event
+      schema: schemas/GroupCreated.avsc
+  consumed:
+    - name: payment.coupon
+      version: v2
+      min_health: 85   # block if upstream health drops below this
+
+quality:
+  test_coverage: ">= 80%"
+  archtest_compliance: required
+  performance:
+    p99_latency_ms: 200
+    error_rate_max: 0.005
+
+lifecycle:
+  state: candidate              # experimental | candidate | asset | maintenance | retired
+  state_entered_at: 2026-04-15
+  health_thresholds:
+    value_score: ">= 60"
+    structure_score: ">= 60"
+    engineering_score: ">= 60"
+  retirement_window: "24h soft-delete"
+  sunset_if: "usage < 100/d for 14d"
+  review_at: 2026-05-15
+
+signals:
+  collected_by:
+    - ci                # build pass / coverage / test
+    - otel              # traces / metrics / logs
+    - sonar             # code smell / vuln scan
+    - archtest          # boundary compliance
+    - github-api        # PR activity / commit decay
+  # Strictly forbidden: humans manually editing signal values.
+  # All signals must be mechanically collected derived quantities.
+
+audit:
+  ai_decisions_log: docs/agent-decisions/order-service.group-buy.md
+  reversibility_max: R3   # Agent may auto-act up to R2; R3 needs human review
