@@ -130,11 +130,11 @@ AI 编码已经把生产端边际成本压到接近零，但人类审查能力�
 
 ➡️ **[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[Open English → `deck/en/index.html`](./deck/en/index.html)**
 
-#### 🏭 v8 · 工厂母隐喻 · 反哺循环
+#### 🏭 工厂版 · Factory Edition
 
-> 12 页 · 极致压缩 · 单一母隐喻贯穿 · 融入反哺循环 / 多 agent 编队 / 模块即商品 / 审查方演化
+> 12 页 · 工厂 + 流水线母隐喻贯穿 · 反哺循环 / 多 agent / 模块即商品 / 审查方演化 / 演进策展人
 
-➡️ **[预览 v8 → `deck-v8/index.html`](./deck-v8/index.html)** · 含工厂剖面 minimap · 12 页全部完成
+➡️ **[打开中文版 → `deck-factory/index.html`](./deck-factory/index.html)**　|　**[Open English → `deck-factory/en/index.html`](./deck-factory/en/index.html)**
 
 ---
 
