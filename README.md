@@ -104,6 +104,7 @@ AI 编码已经把生产端边际成本压到接近零，但人类审查能力�
 | [`three-leaps.md`](./three-leaps.md) | 主方法论读者 | 16 章 / 三层 × 三跃迁 / 4 篇附录 |
 | [`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md) | greenfield 起步项目 | 35 项能力 → L0/L1/L2/L3 跃迁映射 |
 | [`deck/index.html`](./deck/index.html) | 想要可视化总览 | 15 页配套幻灯片 · 订单团购案例贯穿 |
+| [`three-leaps.pdf`](./three-leaps.pdf) | 离线 / 打印 / 分享 | 配套幻灯片的 PDF 导出（3.5 MB · 15 页） |
 | [`archive/v3.md`](./archive/v3.md) | 想看推理细节 | 旧版本 · 七视角×四阶段 · 已归档 |
 | [`archive/v3-bootstrap.md`](./archive/v3-bootstrap.md) | 想看原始 P0-P7 表述 | 旧版本 bootstrap · 已归档 |
 
@@ -237,9 +238,10 @@ See [`three-leaps.md`](./three-leaps.md) §3 for the first-principles derivation
 
 | Document | Audience | Content |
 |---|---|---|
-| [`three-leaps.md`](./three-leaps.md) | Main methodology readers | 16 chapters · 3 layers × 3 leaps · 4 appendices |
-| [`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md) | Greenfield projects | 35 capabilities mapped to L0/L1/L2/L3 |
-| [`deck/index.html`](./deck/index.html) | Want a visual overview | 15-page slide deck with order-service group-buy case |
+| [`three-leaps.en.md`](./three-leaps.en.md) | Main methodology readers | 16 chapters · 3 layers × 3 leaps · 4 appendices |
+| [`three-leaps-bootstrap.en.md`](./three-leaps-bootstrap.en.md) | Greenfield projects | 35 capabilities mapped to L0/L1/L2/L3 |
+| [`deck/en/index.html`](./deck/en/index.html) | Want a visual overview | 15-page slide deck with order-service group-buy case |
+| [`three-leaps.pdf`](./three-leaps.pdf) | Offline / print / share | PDF export of the slide deck (3.5 MB · 15 pages) |
 | [`archive/v3.md`](./archive/v3.md) | Want derivation details | Older version · seven-lens × four-phase · archived |
 | [`archive/v3-bootstrap.md`](./archive/v3-bootstrap.md) | Want original P0–P7 framing | Older bootstrap · archived |
 
