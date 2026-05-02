@@ -224,6 +224,28 @@ Borrowing v3's Capital-theoretic view: **the framework is the most highly congea
 > Excellent framework × 100 modules = 100 high-quality outputs
 > Missing framework × 100 modules = 100 messes (chaos replicated at the same speed)
 
+#### Framework is not a single capability — it is the cumulative output of the entire L0 layer
+
+The four functions cannot all be in place at one time:
+
+```
+Blueprint (pre-ADR + 3-tier skeleton + SDK signatures + contract location + test-base placeholder)
+   ↓
+CI lets lint/test/build run on the skeleton (constraints start being enforced)
+   ↓
+hello-world routes through the skeleton, not naked code (blueprint validated runnable)
+   ↓
+Domain layering fills the skeleton (skeleton becomes content-bearing)
+   ↓
+archtest turns README boundaries into machine rules (constraints truly bind)
+                            ↓
+        Complete framework = blueprint + 6 enforced capabilities
+```
+
+**Important**: the framework's "constraints" need CI and archtest to enforce them. Without enforcement, the framework is just README text — **any AI autonomy promise built on top stands on loose constraints**. This is the shared root of anti-patterns A1 (over-governance) and A3 (gradient breach).
+
+See [`three-leaps-bootstrap.en.md` §3](./three-leaps-bootstrap.en.md#3--l0--engineering-gravity-field-foundation) for the staged construction path and the P0.0 blueprint capability.
+
 ### 4.2 Module identity: `module.yaml`
 
 Every module must carry a machine-readable identity card. This is the entry point to Leap ① — without manifests, you can't even say "which module is failing."
@@ -596,17 +618,77 @@ loop:
     2. collect signals (CI / git / dependency / traffic)
     3. compute current health score (3-D)
     4. detect drift (current vs desired)
-    5. propose remediation, delegated by reversibility R0–R5:
+    5. choose remediation strategy: PATCH or REPLACE
+         PATCH (apply patch) ── fits: localized drift / sound module structure / low fix cost
+         REPLACE (rewrite)   ── fits: systemic drift / framework has evolved / rewrite cost ≤ patch cost
+                              ↳ Module-as-commodity (see §10.6): under strong framework
+                                constraints, regenerating from scaffolding + letting intent
+                                drive AI to write a fresh one is often more controllable
+                                than patching years of accumulated patches
+    6. apply remediation, delegated by reversibility R0–R5:
          R0–R1 (read-only / experimental): AI executes directly
          R2 (controlled external): AI auto-released + audit log
-         R3 (cross-domain write): AI proposes + human review + staged rollout
+         R3 (cross-domain write): AI proposes + review (see §10.5 for reviewer evolution)
          R4 (user impact): blocked + mandatory human decision
          R5 (financial / physical): never granted
-    6. report status to dashboard + decision audit store
-    7. state changes feed back to L1 · input for next cycle
+    7. report status to dashboard + decision audit store
+    8. state changes feed back to L1 · input for next cycle
 ```
 
 > **What this section answers**: Leap ③ turns "one-off prompts" into "continuously running environment-level feedback control systems."
+
+---
+
+### 9.5 Multi-agent multi-model · ensemble play
+
+> Single agent / single model is v7's initial stance. With a strong-enough framework and quality substrate, **every step of intent → state → module → launch can be run in parallel by multiple agents and multiple models, racing → winning combination chosen.**
+
+#### 9.5.1 Why ensemble
+
+Different models have different strengths (long context / reasoning depth / coding precision / tool use / vision); a single model is suboptimal at every stage. Letting multiple models specialize: **combined strengths > strongest single model.**
+
+#### 9.5.2 Stage-by-stage ensemble examples
+
+| Stage | How to use multiple agents | Selection rule |
+|---|---|---|
+| Intent comprehension | Long-context model (Gemini 2M) parses PRD + reasoning model (Claude) extracts intent.yaml + verifier model cross-checks | All three agree → pass; disagree → escalate to human |
+| Module implementation | 3 agents implement in parallel → run same test suite | PR with highest coverage + perf wins |
+| Code review | Security agent + perf agent + arch agent + style agent in parallel | Composite score; any critical issue blocks |
+| Launch decision | Reconciler combines multiple independent health-score evaluations | Majority rules; minority dissent enters audit |
+
+#### 9.5.3 Selection strategy encoded in intent
+
+```yaml
+intent:
+  execution:
+    strategy: race | majority | ensemble | tournament
+    # race       = multiple agents race; first to pass wins
+    # majority   = multi-model vote, majority rules
+    # ensemble   = weighted combination of multiple outputs
+    # tournament = multiple elimination rounds, best wins
+    judges:
+      - model: claude-opus-4-7
+        role: architecture compliance
+      - model: claude-sonnet-4-6
+        role: performance optimization
+      - model: gpt-5
+        role: security risk
+    quorum: 2/3      # threshold for release
+```
+
+#### 9.5.4 Capital-theoretic view: V multiplied
+
+Single agent = 1× V; ensemble = N× V, but **you only pay for the highest-quality output**. The other N–1 drafts become "scrap," but at the system level the cost is often far lower than human rework. **The key is: token cost < human cost × reworks saved.**
+
+#### 9.5.5 Anti-patterns
+
+- **Blind voting** — if different models share highly homogeneous training data, majority rule degenerates to single rule; pick judges with model heterogeneity
+- **Judge = player** — same model both writes and reviews code, drifts toward self-rationalization; the judge must be an independent model
+- **Infinite rounds** — tournament must have a max-round cap, otherwise it loops forever
+
+> **What this section answers**: Ensemble play evolves v7's "AI soldier" into "AI cluster" — this is §10's R-gradient in parallel form: **the same reversible action, multiple agents racing → best wins.**
+>
+> **§9.5 is the engineering implementation of §10.5**: when the independent AI reviewer agent is played by "another model," §9.5's "the judge must be an independent model" principle provides the credibility §10.5's "independent AI review" needs.
 
 ---
 
@@ -658,6 +740,108 @@ R4 in even the long-term vision phase remains "block + force human decision," no
 Handing R4/R5 to the Agent is the core symptom of anti-pattern A3 "Gradient Breach" (see §12). **Anti-pattern cost rises with layer** — L0 breach is waste, L3 breach is incident.
 
 > **What this section answers**: The R-gradient turns "AI autonomy" from a slogan into an executable, auditable engineering parameter with a red line.
+
+---
+
+### 10.5 Reviewer evolution (v7+ direction)
+
+> R3 = "AI proposes + human review" in §10.1's table is **v7's initial stance**. With a strong-enough framework and DevOps stack, **the "human review" itself can evolve** — not by abandoning review, but by freeing the reviewer from being the bottleneck.
+
+#### Three reviewer kinds
+
+| Reviewer | Fits | Cadence | Trust source |
+|---|---|---|---|
+| **Human review** | Framework / contract / spec changes (meta layer) | Slow but authoritative | Seniority + accountability |
+| **Independent AI review** | Instance code changes (within the framework) | 24×7 | Model heterogeneity + strong framework + health-score safety net |
+| **Multi-agent cross-review** | High-disagreement / high-risk scenarios | Parallel | Multi-model majority vote (see §9.5) |
+
+#### Boundaries between the three
+
+> **Key**: upgrading the reviewer ≠ removing review. The three reviewer kinds coexist across different scenarios.
+
+```
+┌────────────────────────────────┬────────────────────────────────┐
+│  Human review preserved (never │  AI review can take over       │
+│  goes away)                    │                                │
+├────────────────────────────────┼────────────────────────────────┤
+│ · L0 framework changes         │ · Instance code (within the    │
+│   (affects all modules)        │   framework boundary)          │
+│ · New boundary rules between   │ · Verification scenarios bound │
+│   R3 → R4                      │   to intent.yaml fields        │
+│ · Changes to the R-gradient    │ · Routine changes covered by   │
+│   itself                       │   health thresholds            │
+│ · ADR-level decisions          │ · OOB attempts already caught  │
+│ · Anything touching R4/R5      │   by archtest                  │
+│                                │ · Changes safe under staged    │
+│                                │   rollout                      │
+└────────────────────────────────┴────────────────────────────────┘
+```
+
+#### R3 upgrade prerequisites (all four must hold)
+
+1. **Complete L0 framework in place** — archtest / contract / quality substrate all enforced
+2. **DevOps stack in place** — seconds-level rollback + canary + 3-D health + on-call
+3. **Independent reviewer agent** — uses **heterogeneous models** vs the coding agent, avoiding judge = player (echoes §9.5.5 anti-pattern)
+4. **Complete decision audit** — every AI autonomous decision is structurally queryable, post-hoc replayable
+
+When met, R3 evolves:
+
+```
+v7 initial R3:  AI proposes + human review
+   ↓ once prerequisites met
+v7+ R3:        AI proposes + independent AI review (multi-agent cross-review)
+               + health-score safety net + reversible
+   ↓
+R4/R5:         Never change — human review / never granted
+```
+
+> **What this section answers**: Turn "human review" from a fixed role into an **engineerable bottleneck that can be upgraded** — provided strong framework + heterogeneous models + health-score safety net are all in place.
+
+---
+
+### 10.6 Module-as-commodity — economics of patch vs replace
+
+> A module is a commodity stamped out on the framework machine tool. Under quality-substrate constraints, **"fix" is no longer the default option — "rewrite the whole module" is often the more economical fix.**
+
+#### Why "fix-first" used to be the rule
+
+Traditional software engineering defaulted to patch over replace because:
+
+- Average module dev cost = several person-weeks
+- Rewrite = re-paying the entire dev cost
+- Rewrite-failure risk ≥ patch-failure risk
+
+#### Why v7+ enables "replace-first"
+
+Three preconditions changed the economics:
+
+| Precondition | Cost impact |
+|---|---|
+| **L0 strong framework constraints** | Modules start from scaffolding, reuse framework SDKs / contracts / test substrate → rewrite cost ↓ 70%+ |
+| **L2 intent fully executable** | intent.yaml is the module's "DNA" — rewrite is essentially "regenerate from intent via AI" |
+| **L3 multi-agent ensemble** | Same intent rewritten by N agents in parallel → best wins (§9.5) → rewrite time drops from days to hours |
+
+#### Reconciler decision point: patch or replace
+
+```
+when drift detected:
+    if drift_localized AND patch_cost < replace_cost:
+        propose PATCH                    # traditional path
+    elif framework_drifted_significantly OR
+         module_age > 6mo AND patch_count > 10 OR
+         intent_has_changed_substantially:
+        propose REPLACE                  # new path
+                                         # NB: REPLACE still flows through
+                                         # the R-gradient and §10.5 reviewers
+```
+
+#### Anti-patterns
+
+- **Replace addiction** — every bug becomes a rewrite: surrenders patch's cost advantage on small changes
+- **Replace without touching intent** — rewrite but don't update intent.yaml: same requirement produces the same bug
+- **Replace bypassing review** — treating replace as R0 auto-execute: replace cost ≥ patch, must traverse the same R-gradient
+
+> **What this section answers**: Module replaceability is the new engineering economics enabled by v7+. **Framework is the machine, modules are the commodities** — a broken commodity gets replaced, the machine doesn't move. This is the natural corollary of §4.1's Capital-theoretic C/V view.
 
 ---
 

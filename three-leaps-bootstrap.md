@@ -1,6 +1,6 @@
 ---
 title: "三跃迁 · 起步手册 · Bridle Bootstrap"
-description: "从零仓库到 L3 自治的 35 项能力清单 —— greenfield 项目走完 P0-P7 八阶段进入主方法论。每项能力按 5 字段标准（为什么/做什么/系统编织/出口/工具）展开。"
+description: "从零仓库到 L3 自治的 36 项能力清单 —— greenfield 项目走完 P0-P7 八阶段进入主方法论。每项能力按 5 字段标准（为什么/做什么/系统编织/出口/工具）展开。"
 lang: zh-CN
 permalink: /three-leaps-bootstrap/
 keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DORA, Harness, IaC, GitOps, Reconciliation, Bridle
@@ -10,7 +10,7 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
 
 > 从零到 L3 自治的能力台阶 —— 主方法论 [`three-leaps.md`](./three-leaps.md) 假设 L0 引力场已就位。本手册补的是更前一步：**零仓库 / 零 CI / 零 manifest / 零 Harness** 的 greenfield 起步路径。
 
-走通本手册的 35 项能力后，团队进入 L3 跃迁的入口条件就已超额满足。
+走通本手册的 36 项能力后，团队进入 L3 跃迁的入口条件就已超额满足。
 
 ---
 
@@ -18,7 +18,7 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
 
 ### 是什么
 
-- 起步路径手册 + 35 项能力清单 + 跃迁映射图
+- 起步路径手册 + 36 项能力清单 + 跃迁映射图
 - 给主方法论提供"前置地基"的可操作步骤
 - **能力为主体、工具为细节**
 
@@ -82,9 +82,9 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
 
 ---
 
-## 2 · 35 能力 → 三跃迁映射
+## 2 · 36 能力 → 三跃迁映射
 
-主方法论的层级是 **L0 → L1 → L2 → L3**。本手册 35 能力按以下映射归属：
+主方法论的层级是 **L0 → L1 → L2 → L3**。本手册 36 能力按以下映射归属：
 
 ```
                      ┌────────────────────────────────────────┐
@@ -114,6 +114,7 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
                                        ▲
        ╔════════════════════════════════════════════════════════╗
        ║  L0 · 工程引力场                                         ║
+       ║  P0.0 ★ 框架建设（凝结资本 · 必须先于一切）               ║
        ║  P0 全套 (0.1-0.5) 仓库/CI/ADR/协作/review              ║
        ║  P1.1 领域分层 / P1.4 API 版本 / P1.5 DB migration      ║
        ║  P2 全套 (2.1-2.6) 漏洞/覆盖率/依赖/secrets/flag/合规     ║
@@ -131,12 +132,62 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
 
 ## 3 · L0 · 工程引力场（地基）
 
+> **重要前提**：**框架不是单点能力，是 L0 整层渐进建造的产物**。
+
+### 框架在 L0 中的渐进演化
+
+```
+P0.0  框架蓝图与最小骨架    →  blueprint：架构决策 / 三层骨架 / SDK 接口签名 / 契约位置 / test-base 占位
+   ↓
+P0.1  CI                    →  enforce：lint / test / build 在骨架上跑起来
+   ↓
+P0.2  hello-world           →  validate：第一条端到端走的是骨架而非裸代码
+   ↓
+P0.3  ADR                   →  freeze：架构决策持久化为可追溯记录
+   ↓
+P1.1  领域分层              →  fill：从空骨架到有内容
+   ↓
+P1.3  archtest 静态守卫     →  enforce boundaries：约束真正生效，越界 PR 被阻塞
+                                       ↓
+                完整框架 = P0.0 + P0.1 + P0.2 + P0.3 + P1.1 + P1.3 共同构成
+```
+
+P0.0 给出"应该是什么"的蓝图，P0.1 让 CI 强制 lint/test，P1.3 让 archtest 强制边界。**只有当 P1.3 出口达成时，才能说"框架真正就位"。** 在此之前 P0.0 的"约束"只是文档，不是 enforced rule。
+
+### 3.0 框架蓝图与最小骨架（P0.0）★
+
+> **L0 入口能力** · 给后续能力一个可被 enforce 的对象 · **不是"完整框架"**
+
+- **为什么**：在第一行业务代码之前，必须先决定栈选 / 分层数 / 抽象边界 / 契约形式——否则 P0.1 CI 无 lint 对象、P1.3 archtest 无规则可写、P1.2 manifest 无 schema 可校验。"AI 自治"的承诺更进一步依赖：框架越精密 → AI 产出精度越高（资本论 C 视角）。任何在零蓝图状态下让 AI 写代码的尝试，都是在沼泽里冲浪。
+- **做什么**：先画蓝图，建占位骨架，留待后续能力填充与 enforce——
+  - **架构决策（pre-ADR）**：栈选 / 分层数 / 抽象点 / 契约形式 / 是否事件驱动 — 写成简版 ADR-0001（P0.3 会把它正式化）
+  - **三层目录骨架**：`domain/` `shared/` `adapters/` 空目录但每个含 README 标注边界与命名约定
+  - **SDK 接口签名草案**：存储 / 消息 / 鉴权 / 观测各一个 interface 文件（只签名不实现）
+  - **契约目录与格式**：`contracts/` 目录就位，选定 OpenAPI / proto / JSON Schema 之一
+  - **test-base 包占位**：`test-base/` 包存在，含一个 trivial base class 示意结构
+- **系统编织**：→ P0.1 CI 在此骨架上设置 lint/type/test 规则；→ P0.2 hello-world 走这个骨架；→ P0.3 把 pre-ADR 正式化为 ADR-0001；→ P1.1 在三层骨架中填充内容；→ P1.3 archtest 把 README 里的边界约定变成机器规则
+- **出口（降级 · 仅蓝图层）**：
+  - 简版 ADR-0001 存在，含栈/分层/抽象/契约决策
+  - 三层目录骨架存在（可为空，但 README 标注边界）
+  - 至少一份 SDK 接口签名草案
+  - `contracts/` 目录与格式选定
+  - `test-base/` 包占位存在
+- **❌ 不在 P0.0 出口范围内**：质量基底 enforce / 边界规则强制 / 契约校验阻塞 — 这些是 P0.1 / P1.3 的责任
+- **实现工具**：架构决策走 ADR；目录骨架手写或 cookiecutter / yo / nx generator / dotnet new template；接口签名靠 IDE
+
+> **反模式**：
+> - 把 P0.0 当成"建完整框架"——质量基底没有 P0.1 CI 跑不起来，边界规则没有 P1.3 archtest 不能 enforce
+> - **零蓝图直接写 hello-world**——CI 在裸代码上 lint，第一个真实模块加进来时才发现栈选错了
+> - **过度蓝图**——P0.0 不写实现代码，只做接口签名和目录布局；占位包里的 trivial base class 不是要立刻能用
+>
+> **最小可行蓝图**：单人 / 小团队不必上 12 层 Clean Architecture，3 层骨架 + 4 个 SDK 接口签名 + 1 份契约规范选型 + 1 个 test-base 占位即可。**最小蓝图 + 后续强 enforce > 大蓝图 + 弱 enforce**。
+
 ### 3.1 仓库 + 第一条 CI（P0.1）
 
-- **为什么**：没有版本控制 + 自动验证，所有后续治理无附着点
-- **做什么**：建立 git 仓库 + 一条 push/PR 触发的 CI（lint + test + build）
-- **系统编织**：作为后续所有 CI 流水线的扩展基底；CI 全绿是 L3 评估循环的最早事件信号
-- **出口**：CI 全绿持续 4 PR；任何 push/PR 自动跑 < 5 min
+- **为什么**：没有版本控制 + 自动验证，所有后续治理无附着点。**P0.0 蓝图离开 CI 就只是 README** —— P0.1 让 lint/type/test 真正在骨架上跑起来，蓝图开始变成约束
+- **做什么**：建立 git 仓库 + 一条 push/PR 触发的 CI（lint + type + test + build），lint 规则按 P0.0 三层骨架配置（如禁止 `domain/` 引用 `adapters/`）
+- **系统编织**：← P0.0 提供 lint/test 的目标骨架；→ 后续所有 CI 流水线的扩展基底；CI 全绿是 L3 评估循环的最早事件信号
+- **出口**：CI 全绿持续 4 PR；任何 push/PR 自动跑 < 5 min；P0.0 三层骨架的至少 1 条边界规则被 lint 强制
 - **工具**：GitHub Actions / Azure Pipelines / GitLab CI
 
 ### 3.2 hello-world 主路径（P0.2）
@@ -245,10 +296,13 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
 
 ### L0 出口信号
 
-- CI 全绿 + main 可运行 hello-world + 第一份 ADR + README/CONTRIBUTING/CODEOWNERS 齐全
-- 故意越界 PR 被 CI 拦（基于领域分层 + 后续守卫）
+- **框架蓝图就位**（P0.0）：ADR-0001 / 三层骨架 / 4 个 SDK 接口签名 / contracts 目录 / test-base 占位
+- **框架约束 enforced**（P0.1+P1.1+P1.3）：CI lint 配三层规则、archtest 阻塞越界 PR
+- CI 全绿 + main 可运行 hello-world（走骨架而非裸代码）+ 第一份 ADR + README/CONTRIBUTING/CODEOWNERS 齐全
 - migration 演练通过
 - 4 层扫描全绿 ≥ 4 周；覆盖率有趋势；0 secret 进 git；feature flag 起步；数据合规标注覆盖
+
+> **当 L0 全部出口达成时，"完整框架"才算真正就位** —— 此时 P0.0 的蓝图已被 P0.1 / P1.1 / P1.3 联合 enforce，不再只是 README。
 
 → **进入 L1 跃迁**
 
@@ -529,7 +583,7 @@ keywords: AI 编码起步, greenfield, manifest, 静态守卫, OpenTelemetry, DO
 
 | 跃迁 | 客观可验证清单 |
 |---|---|
-| L0 | [ ] CI 全绿；[ ] main 可运行；[ ] ADR；[ ] README+CONTRIBUTING+CODEOWNERS；[ ] 越界 PR 被拦；[ ] migration 演练；[ ] 4 层扫描全绿 ≥ 4 周；[ ] 0 secret 进 git；[ ] feature flag 起步 |
+| L0 | [ ] **P0.0 蓝图就位**（ADR-0001 / 三层骨架 / SDK 接口 / contracts 目录 / test-base 占位）；[ ] CI 全绿；[ ] main 可运行 hello-world（走骨架）；[ ] ADR；[ ] README+CONTRIBUTING+CODEOWNERS；[ ] **越界 PR 被 archtest 拦**；[ ] migration 演练；[ ] 4 层扫描全绿 ≥ 4 周；[ ] 0 secret 进 git；[ ] feature flag 起步 |
 | L1 | [ ] 100% 模块 manifest+lifecycle；[ ] trace_id 反追 PR；[ ] SLO 已 burn；[ ] on-call 有人；[ ] DORA daily ≥ 4 周；[ ] retro+action；[ ] post-mortem；[ ] VSM；[ ] 健康度评分有趋势 |
 | L2 | [ ] Harness 五件套就位；[ ] AI 接受率有数据；[ ] 决策审计 ≥ 30 条；[ ] flag canary 回滚验证；[ ] IaC 一键环境 |
 | L3 | [ ] reconciler dry-run 零误判；[ ] R1 自治跑通；[ ] 决策审计可结构化查询；[ ] R5 永不放开 |

@@ -1,6 +1,6 @@
 ---
 title: "Three Leaps Bootstrap · Bridle"
-description: "35-capability checklist from zero repo to L3 autonomy — eight-stage P0-P7 path for greenfield projects, each capability laid out in five fields (why / what / system weaving / exit / tools)."
+description: "36-capability checklist from zero repo to L3 autonomy — eight-stage P0-P7 path for greenfield projects, each capability laid out in five fields (why / what / system weaving / exit / tools)."
 lang: en
 permalink: /en/three-leaps-bootstrap/
 keywords: AI coding bootstrap, greenfield, manifest, static guard, OpenTelemetry, DORA, Harness, IaC, GitOps, Reconciliation, Bridle
@@ -12,7 +12,7 @@ keywords: AI coding bootstrap, greenfield, manifest, static guard, OpenTelemetry
 >
 > *中文版：[`three-leaps-bootstrap.md`](./three-leaps-bootstrap.md)*
 
-After completing the 35 capabilities in this handbook, your team has more than satisfied the entry conditions for the L3 leap.
+After completing the 36 capabilities in this handbook, your team has more than satisfied the entry conditions for the L3 leap.
 
 ---
 
@@ -20,7 +20,7 @@ After completing the 35 capabilities in this handbook, your team has more than s
 
 ### What this is
 
-- A bootstrap-path handbook + 35-capability checklist + leap-mapping diagram
+- A bootstrap-path handbook + 36-capability checklist + leap-mapping diagram
 - A "pre-foundation" for the main methodology, with concrete actionable steps
 - **Capability is the subject; tools are details**
 
@@ -84,9 +84,9 @@ Each capability has three things, all objectively observable events:
 
 ---
 
-## 2 · 35 Capabilities → Three Leaps Mapping
+## 2 · 36 Capabilities → Three Leaps Mapping
 
-The main methodology's hierarchy is **L0 → L1 → L2 → L3**. This handbook's 35 capabilities map as follows:
+The main methodology's hierarchy is **L0 → L1 → L2 → L3**. This handbook's 36 capabilities map as follows:
 
 ```
                      ┌────────────────────────────────────────┐
@@ -116,6 +116,7 @@ The main methodology's hierarchy is **L0 → L1 → L2 → L3**. This handbook's
                                        ▲
        ╔════════════════════════════════════════════════════════╗
        ║  L0 · Engineering Gravity Field                         ║
+       ║  P0.0 ★ Framework build (congealed capital · before all)║
        ║  P0 full set (0.1-0.5) repo/CI/ADR/collab/review        ║
        ║  P1.1 domain layering / P1.4 API ver / P1.5 DB migration║
        ║  P2 full set (2.1-2.6) vuln/coverage/deps/secrets/flag/compliance║
@@ -133,12 +134,62 @@ The main methodology's hierarchy is **L0 → L1 → L2 → L3**. This handbook's
 
 ## 3 · L0 · Engineering Gravity Field (Foundation)
 
+> **Important premise**: **the framework is not a single capability — it is the cumulative output of the entire L0 layer.**
+
+### How the framework is built across L0
+
+```
+P0.0  Blueprint & minimal skeleton  →  decide: arch / 3-tier skeleton / SDK signatures / contract location / test-base placeholder
+   ↓
+P0.1  CI                            →  enforce: lint / test / build run on the skeleton
+   ↓
+P0.2  hello-world                   →  validate: first end-to-end goes through the skeleton, not naked code
+   ↓
+P0.3  ADR                           →  freeze: arch decisions persisted as traceable records
+   ↓
+P1.1  Domain layering               →  fill: empty skeleton becomes content-bearing
+   ↓
+P1.3  archtest static guard         →  enforce boundaries: rules truly bind, OOB PRs blocked
+                                       ↓
+                Complete framework = P0.0 + P0.1 + P0.2 + P0.3 + P1.1 + P1.3 together
+```
+
+P0.0 sets out what *should be*; P0.1 makes CI enforce lint/test; P1.3 makes archtest enforce boundaries. **Only when L0's full exit signals are met can the framework be said to be "really in place."** Until then P0.0's "constraints" are just README text, not enforced rules.
+
+### 3.0 Blueprint & minimal skeleton (P0.0) ★
+
+> **L0 entry capability** · gives subsequent capabilities a target to enforce against · **NOT a "complete framework"**
+
+- **Why**: before the first line of business code, you must decide stack / layer count / abstraction boundary / contract format — otherwise P0.1 CI has nothing to lint, P1.3 archtest has no rules to write, P1.2 manifest has no schema to validate. The "AI autonomy" promise goes further: framework precision determines AI output precision (Capital-theoretic C view). Any attempt at letting AI code under a zero-blueprint state is surfing in a swamp.
+- **What**: draw the blueprint, build placeholder skeletons, leave enforcement to later capabilities —
+  - **Architecture decisions (pre-ADR)**: stack / layer count / abstraction points / contract format / event-driven y/n — short ADR-0001 (P0.3 will formalize it)
+  - **Three-tier directory skeleton**: `domain/` `shared/` `adapters/` empty dirs, each with a README annotating boundaries and naming conventions
+  - **SDK interface signature drafts**: one interface file each for storage / messaging / auth / observability (signatures only, no implementation)
+  - **Contract directory + format**: `contracts/` exists, OpenAPI / proto / JSON Schema chosen
+  - **test-base package placeholder**: `test-base/` exists with a trivial base class showing structure
+- **System weaving**: → P0.1 CI configures lint/type/test rules on this skeleton; → P0.2 hello-world routes through this skeleton; → P0.3 formalizes pre-ADR into ADR-0001; → P1.1 fills the three-tier skeleton with content; → P1.3 archtest turns the README boundary annotations into machine rules
+- **Exit (downscoped · blueprint layer only)**:
+  - Short ADR-0001 exists, with stack/layer/abstraction/contract decisions
+  - Three-tier directory skeleton exists (may be empty, but README annotates boundaries)
+  - At least one SDK interface signature draft
+  - `contracts/` directory and format chosen
+  - `test-base/` package placeholder exists
+- **❌ NOT in P0.0's exit scope**: quality substrate enforced / boundary rules binding / contract validation blocking — these belong to P0.1 / P1.3
+- **Tools**: arch decisions via ADR; directory skeleton hand-written or cookiecutter / yo / nx generator / dotnet new template; signatures via IDE
+
+> **Anti-patterns**:
+> - Treating P0.0 as "build the complete framework" — quality substrate cannot run without P0.1 CI; boundary rules cannot be enforced without P1.3 archtest
+> - **Zero blueprint, straight to hello-world** — CI lints naked code; the first real module reveals the stack choice was wrong
+> - **Over-blueprint** — P0.0 writes no implementation code, only signatures and layout; the trivial base class in the placeholder package isn't meant to be immediately usable
+>
+> **Minimum viable blueprint**: solo / small teams should not adopt 12-layer Clean Architecture — three layers + 4 SDK interface signatures + 1 contract format choice + 1 test-base placeholder suffices. **Minimum blueprint + strong subsequent enforcement > large blueprint + weak enforcement**.
+
 ### 3.1 Repo + first CI (P0.1)
 
-- **Why**: without version control + auto verification, all subsequent governance has no anchor
-- **What**: git repo + push/PR triggered CI workflow (lint + test + build)
-- **System weaving**: foundation for all subsequent CI (P1 guards / P2 scans / P4 DORA); CI green is the earliest event signal for L3 evaluation
-- **Exit**: CI green for 4 consecutive PRs; any push/PR runs < 5 min
+- **Why**: without version control + auto verification, all subsequent governance has no anchor. **The P0.0 blueprint without CI is just README** — P0.1 makes lint/type/test actually run on the skeleton, turning the blueprint into binding constraint
+- **What**: git repo + push/PR triggered CI (lint + type + test + build); lint rules configured against the P0.0 three-tier skeleton (e.g., forbid `domain/` from importing `adapters/`)
+- **System weaving**: ← P0.0 provides the lint/test target skeleton; → foundation for all subsequent CI; CI green is the earliest event signal for L3 evaluation
+- **Exit**: CI green for 4 consecutive PRs; any push/PR runs < 5 min; at least 1 boundary rule from P0.0's three-tier skeleton enforced via lint
 - **Tools**: GitHub Actions / Azure Pipelines / GitLab CI
 
 ### 3.2 Hello-world main path (P0.2)
@@ -247,10 +298,13 @@ The main methodology's hierarchy is **L0 → L1 → L2 → L3**. This handbook's
 
 ### L0 exit signals
 
-- CI green + main runs hello-world + first ADR + README/CONTRIBUTING/CODEOWNERS in place
-- Deliberately-out-of-bounds PR blocked by CI (based on domain layering + later guards)
+- **Blueprint in place** (P0.0): ADR-0001 / 3-tier skeleton / 4 SDK interface signatures / contracts dir / test-base placeholder
+- **Framework constraints enforced** (P0.1+P1.1+P1.3): CI lint configured for 3-tier rules, archtest blocks OOB PRs
+- CI green + main runs hello-world (through skeleton, not naked code) + first ADR + README/CONTRIBUTING/CODEOWNERS in place
 - Migration drill passed
 - 4-layer scan green ≥ 4 weeks; coverage trend; 0 secrets in git; feature flag starter; data compliance annotation coverage
+
+> **The "complete framework" is only really in place when all L0 exits are met** — at this point P0.0's blueprint has been jointly enforced by P0.1 / P1.1 / P1.3, no longer just README.
 
 → **Enter L1 leap**
 
@@ -531,7 +585,7 @@ Regression is not failure — it is honesty. **Pushing forward** would compound 
 
 | Leap | Objectively verifiable checklist |
 |---|---|
-| L0 | [ ] CI green; [ ] main runs; [ ] ADR; [ ] README+CONTRIBUTING+CODEOWNERS; [ ] OOB PR blocked; [ ] migration drill; [ ] 4-layer scan green ≥ 4w; [ ] 0 secrets in git; [ ] feature flag starter |
+| L0 | [ ] **P0.0 blueprint in place** (ADR-0001 / 3-tier skeleton / SDK signatures / contracts dir / test-base placeholder); [ ] CI green; [ ] main runs hello-world (through skeleton); [ ] ADR; [ ] README+CONTRIBUTING+CODEOWNERS; [ ] **OOB PR blocked by archtest**; [ ] migration drill; [ ] 4-layer scan green ≥ 4w; [ ] 0 secrets in git; [ ] feature flag starter |
 | L1 | [ ] 100% modules manifest+lifecycle; [ ] trace_id reverse-traceable; [ ] SLO burned; [ ] on-call owner; [ ] DORA daily ≥ 4w; [ ] retro+action; [ ] post-mortem; [ ] VSM; [ ] health score trending |
 | L2 | [ ] Harness Five Pack in place; [ ] AI acceptance has data; [ ] decision audit ≥ 30; [ ] flag canary rollback; [ ] IaC one-click env |
 | L3 | [ ] Reconciler dry-run zero FP; [ ] R1 autonomy works; [ ] decision audit queryable; [ ] R5 never granted |
