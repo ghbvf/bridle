@@ -128,7 +128,7 @@ AI 编码已经把生产端边际成本压到接近零，但人类审查能力�
 
 > 15 页 · 订单团购案例贯穿全程 · 1920×1080 keynote
 
-➡️ **[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[Open English → `deck/en/index.html`](./deck/en/index.html)**　|　**[📄 PDF (3.5 MB)](./three-leaps.pdf)**
+➡️ **[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[Open English → `deck/en/index.html`](./deck/en/index.html)**
 
 ---
 
@@ -153,8 +153,7 @@ AI 编码已经把生产端边际成本压到接近零，但人类审查能力�
 |---|---|
 | 已有 L0 基础 | 直接读 **主方法论** |
 | 想要 30 分钟速览 | 浏览器打开 **配套幻灯片** |
-| greenfield 起步项目 | **起步手册** 走通 35 能力 → 进入主方法论 §11 全景闭环 |
-| 离线 / 打印 / 分享 | 下载 **PDF** |
+| greenfield 起步项目 | **起步手册** 走通 36 能力 → 进入主方法论 §11 全景闭环 |
 
 ---
 
@@ -319,7 +318,7 @@ See [`three-leaps.md`](./three-leaps.md) §3 for the first-principles derivation
 
 > 15 pages · order-service group-buy case throughout · 1920×1080 keynote
 
-➡️ **[Open English → `deck/en/index.html`](./deck/en/index.html)**　|　**[打开中文版 → `deck/index.html`](./deck/index.html)**　|　**[📄 PDF (3.5 MB)](./three-leaps.pdf)**
+➡️ **[Open English → `deck/en/index.html`](./deck/en/index.html)**　|　**[打开中文版 → `deck/index.html`](./deck/index.html)**
 
 ---
 
@@ -344,8 +343,7 @@ See [`three-leaps.md`](./three-leaps.md) §3 for the first-principles derivation
 |---|---|
 | Already have L0 in place | Read the **main methodology** directly |
 | Want a 30-minute overview | Open the **slide deck** in a browser |
-| Greenfield project starting from zero | Walk through the **bootstrap handbook**'s 35 capabilities, then §11 of the main methodology |
-| Offline / print / share | Download the **PDF** |
+| Greenfield project starting from zero | Walk through the **bootstrap handbook**'s 36 capabilities, then §11 of the main methodology |
 
 ---
 
