@@ -191,6 +191,8 @@ A "leap" implies a paradigm change. L0's six items (framework / module identity 
 
 Calling them "foundation" rather than "phase 1" prevents organizations from treating L0 as an entry-level checkpoint to rush past. **Without L0, the leaps are just slideware.**
 
+> ⚠️ "Foundation" ≠ "frozen object": L0 framework itself is a slow variable but still a variable, evolving via the §10.6 Reflux Loop. See §4.1 "Framework is a living slow variable".
+
 > **What this section answers**: This is the reasoning engine — proof that the three leaps are not a choice, they are a necessity.
 
 ---
@@ -245,6 +247,25 @@ archtest turns README boundaries into machine rules (constraints truly bind)
 **Important**: the framework's "constraints" need CI and archtest to enforce them. Without enforcement, the framework is just README text — **any AI autonomy promise built on top stands on loose constraints**. This is the shared root of anti-patterns A1 (over-governance) and A3 (gradient breach).
 
 See [`three-leaps-bootstrap.en.md` §3](./three-leaps-bootstrap.en.md#3--l0--engineering-gravity-field-foundation) for the staged construction path and the P0.0 blueprint capability.
+
+#### Framework is a living slow variable — the Reflux Loop (a.k.a. Evolution Engine)
+
+The framework is congealed capital, but **congealed ≠ frozen**. The framework is not designed once and then frozen for use — it continuously evolves through the **Reflux Loop**:
+
+```
+Module replacement ──► Multi-agent parallel rewrite ──► Candidate diffs + cross-review findings + serendipitous patterns
+                                                                ↓
+            Framework upgrade queue ◄──────────  harvest (extract commonalities)
+            Intent revision drafts ◄─────────                    ↓
+                  ↓                                              │
+            Next-generation modules start from a more refined skeleton ────┘
+```
+
+- **Slow variable**: framework evolves quarterly, intent monthly, modules weekly — three different cadences, but **all alive**
+- **Reflux direction**: by-products of module replacement (candidate diffs / common findings / new patterns) flow back into framework and intent, making the next batch of modules more refined
+- **Evolution Engine**: this is the true mechanism of §10.6 module-as-commodity — when a commodity breaks, you don't just replace the commodity, **the machine tool itself is improved**
+
+> The Reflux Loop is **the source of life for the entire methodology**. Without reflux, the framework degenerates into frozen dogma → modules struggle on outdated framework → eventual return to the big ball of mud. See §9.4 reconcile harvest step, §9.5 multi-agent reflux, §10.6 evolution engine, §12 anti-pattern A8 "replace-without-reflux", §13.2 evolution curator role, §14.2 reflux hit rate metric.
 
 ### 4.2 Module identity: `module.yaml`
 
@@ -406,6 +427,8 @@ state · candidate (collecting business signals)
 L1's output is **state visibility** — the next step is to declare intent on top of it (→ §6 bridge).
 
 > **What this section answers**: Leap ① turns every module from code into an observable object.
+>
+> Modules themselves are **alive**: during the asset state they may be patched many times or replaced once (see §10.6). The state machine's "asset → maintenance → retired" is not a fated path of decay — **when framework or intent evolves, an asset can also be refreshed via REPLACE**. The state machine covers the module's full living lifecycle.
 
 ---
 
@@ -514,6 +537,8 @@ Not documentation · executable:
 This is the real grounding of v3 §6 "paradigm leap": from "humans inside the decision loop" to "humans inside the desired-state-definition loop."
 
 > **What this section answers**: Leap ② turns intent into a verifiable, convergent, auditable engineering object.
+>
+> Intent itself is also **alive**: business change → intent v2 → triggers module REPLACE (see §10.6 trigger layer). The **intent revision rate** (§14.2) should be a healthy non-zero value — long-unchanged intents usually indicate disconnection from business, not stability.
 
 ---
 
@@ -554,6 +579,17 @@ Until desired = current (CONVERGED), the loop continues.
 > **L2 without L3 is just a promise written on paper.**
 
 Declaration alone won't make the group-buy feature live. You need an executor that translates intent into PRs, runs tests, and retries on failure. That executor is the next chapter's **Harness + Agent**.
+
+### 8.4 Drift is bidirectional
+
+The reconciler's default scenario: current drifts from desired (the module has a problem), and current must be pulled back to desired. But v7's Reflux Loop (§4.1) makes drift **bidirectional**:
+
+| Drift direction | Trigger scenario | Handling path |
+|---|---|---|
+| current → drifts from desired | Code bug / perf regression / dependency outage | Traditional PATCH (§9.4) |
+| **desired → actively evolves** | framework v2 / intent v2 / business change | **REPLACE** + harvest (§9.4 / §10.6) |
+
+The second kind of drift is not "the module broke" — it's "the upper layers have advanced." Current didn't err; the changing desired makes it "outdated." **The REPLACE path is purpose-built for this kind of drift.**
 
 ---
 
@@ -631,8 +667,13 @@ loop:
          R3 (cross-domain write): AI proposes + review (see §10.5 for reviewer evolution)
          R4 (user impact): blocked + mandatory human decision
          R5 (financial / physical): never granted
-    7. report status to dashboard + decision audit store
-    8. state changes feed back to L1 · input for next cycle
+    7. if REPLACE: harvest (Reflux Loop · see §4.1 / §10.6)
+         (a) collect diffs across N agent candidate implementations → distill candidate patterns
+         (b) collect common findings from multi-agent cross-review → framework / CI / archtest improvement queue
+         (c) collect intent under-specifications (candidate divergence = intent gaps) → intent revision drafts
+         ↳ harvest outputs do not take effect immediately; they enter the Evolution Curator (§13.2) review queue
+    8. report status to dashboard + decision audit store
+    9. state changes feed back to L1 · input for next cycle
 ```
 
 > **What this section answers**: Leap ③ turns "one-off prompts" into "continuously running environment-level feedback control systems."
@@ -686,7 +727,21 @@ Single agent = 1× V; ensemble = N× V, but **you only pay for the highest-quali
 - **Judge = player** — same model both writes and reviews code, drifts toward self-rationalization; the judge must be an independent model
 - **Infinite rounds** — tournament must have a max-round cap, otherwise it loops forever
 
-> **What this section answers**: Ensemble play evolves v7's "AI soldier" into "AI cluster" — this is §10's R-gradient in parallel form: **the same reversible action, multiple agents racing → best wins.**
+#### 9.5.6 Multi-agent is not only for selection — also for reflux
+
+"Best wins" is unidirectional (N candidates → 1 selected). But multi-agent ensembles in replacement scenarios produce **bidirectional feedback**:
+
+| By-product | Reflux direction |
+|---|---|
+| **N candidate implementation diffs** | Expose intent under-specification — "three agents wrote three different payment fault-tolerance strategies = intent didn't say clearly" → intent revision draft |
+| **A serendipitous new pattern from one agent** | Distilled into a new framework best practice — "this abstraction fits this scenario better" → framework upgrade queue |
+| **Common findings across multi-agent cross-review** | Reflux into framework / CI / archtest — "this boundary is frequently violated" → add new rule, add archtest, change SDK default |
+
+This is the true power source of §10.6 module-as-commodity — **module replacement does not just produce a new module, it refluxes upward to evolve framework and intent**.
+
+> **Key insight**: single-agent replacement = fixing one bug; **multi-agent replacement = system evolves once**. The diffs across N candidates are more valuable than "the best answer" — they are **test cases for framework / intent**.
+
+> **What this section answers**: Ensemble play evolves v7's "AI soldier" into "AI cluster" — this is §10's R-gradient in parallel form: **the same reversible action, multiple agents racing → best wins**; and is also the core engine of the §10.6 Reflux Loop: **selection is just the start; candidate diffs flowing back to upper layers is the key.**
 >
 > **§9.5 is the engineering implementation of §10.5**: when the independent AI reviewer agent is played by "another model," §9.5's "the judge must be an independent model" principle provides the credibility §10.5's "independent AI review" needs.
 
@@ -813,7 +868,9 @@ Traditional software engineering defaulted to patch over replace because:
 
 #### Why v7+ enables "replace-first"
 
-Three preconditions changed the economics:
+The legitimacy of replacement comes from **two layers of preconditions**: the infrastructure layer (capability available) + the trigger layer (when to actually start). **Both must hold simultaneously**, otherwise replacement is either infeasible or descends into anti-pattern A8 "replace-without-reflux".
+
+**Infrastructure layer (necessary conditions)**:
 
 | Precondition | Cost impact |
 |---|---|
@@ -821,27 +878,62 @@ Three preconditions changed the economics:
 | **L2 intent fully executable** | intent.yaml is the module's "DNA" — rewrite is essentially "regenerate from intent via AI" |
 | **L3 multi-agent ensemble** | Same intent rewritten by N agents in parallel → best wins (§9.5) → rewrite time drops from days to hours |
 
-#### Reconciler decision point: patch or replace
+**Trigger layer (change-driven)**:
+
+| Trigger | Meaning |
+|---|---|
+| **Framework has evolved** | L0 v1 → v2 introduces new abstractions / new SDKs / new contracts → old modules must be rewritten to leverage the new framework's precision |
+| **Intent has evolved** | Business change drives intent revision (intent v2) → rewrite is essentially "rebirth per the new intent"; patch is meaningless here |
+
+> ⚠️ **Without the trigger layer, replacement is anti-pattern**: if neither framework nor intent has evolved, "replacement" means swapping a module with the same module — exactly the symptom of anti-pattern A8 "replace-without-reflux" and the §10.6 anti-pattern "replace without touching intent".
+
+#### Reconciler decision point: patch, replace, or harvest
 
 ```
 when drift detected:
     if drift_localized AND patch_cost < replace_cost:
-        propose PATCH                    # traditional path
-    elif framework_drifted_significantly OR
-         module_age > 6mo AND patch_count > 10 OR
-         intent_has_changed_substantially:
-        propose REPLACE                  # new path
-                                         # NB: REPLACE still flows through
-                                         # the R-gradient and §10.5 reviewers
+        propose PATCH                       # traditional path
+    elif framework_drifted_significantly OR  # trigger layer (must have evolved)
+         intent_has_changed_substantially:   # trigger layer (must have evolved)
+        propose REPLACE                      # new path
+                                             # flows through same R-gradient (§10.5)
+                                             # REPLACE must be followed by harvest (next subsection)
+    elif module_age > 6mo AND patch_count > 10:
+        # old module accumulated patches, but neither framework nor intent has evolved
+        # signal Evolution Curator (§13.2) — should framework / intent be upgraded?
+        signal: refactor_pressure
 ```
 
-#### Anti-patterns
+#### Reflux Engine: replacement's true value is not the new module, it's the upward reflux
+
+```
+Module REPLACE
+       ↓
+N agents rewrite in parallel ────► candidate 1 / candidate 2 / ... candidate N
+       ↓
+       ├──► best wins (§9.5.2) — pick 1 to ship
+       │
+       └──► harvest (§9.4 step 7) — extract candidate diffs / cross-review findings / new patterns
+                ↓
+                ├──► framework upgrade queue: common boundary violations across candidates, missing abstractions
+                ├──► intent revision drafts: under-specifications exposed by candidate divergence
+                └──► pattern candidate library: novel solutions from individual agents
+                ↓
+        Evolution Curator (§13.2) review
+                ↓
+        Approved → framework / intent upgrade → next-gen modules start from a more refined skeleton
+```
+
+**Key insight**: single-agent replacement = fixing one bug; **multi-agent replacement = system evolves once**. **Framework is the machine, modules are the commodities — when a commodity gets replaced, the machine is also being improved**. This is the core mechanism of §4.1's Reflux Loop.
+
+#### Anti-patterns (4 within §10.6)
 
 - **Replace addiction** — every bug becomes a rewrite: surrenders patch's cost advantage on small changes
 - **Replace without touching intent** — rewrite but don't update intent.yaml: same requirement produces the same bug
 - **Replace bypassing review** — treating replace as R0 auto-execute: replace cost ≥ patch, must traverse the same R-gradient
+- **Replace-without-reflux** (A8 · global anti-pattern · see §12) — REPLACE done, but candidate diffs / cross-review findings / serendipitous patterns never enter the harvest queue: replacement degenerates to "regenerate the same thing again," missing the system-evolution opportunity
 
-> **What this section answers**: Module replaceability is the new engineering economics enabled by v7+. **Framework is the machine, modules are the commodities** — a broken commodity gets replaced, the machine doesn't move. This is the natural corollary of §4.1's Capital-theoretic C/V view.
+> **What this section answers**: Module replaceability is the new engineering economics enabled by v7+. But **what truly changes engineering economics is not "commodities are replaceable" but "commodities reflux upward to improve the machine when replaced"** — this is §4.1's Reflux Loop's source of life.
 
 ---
 
@@ -936,7 +1028,7 @@ REVERSIBLE  ┌─────────────┐
                      ↗ higher layer · greater cost of breach
 ```
 
-### 12.2 Seven anti-patterns (v3 + v7 merged)
+### 12.2 Eight anti-patterns (v3 + v7 + Reflux Loop merged)
 
 | # | Anti-pattern | Symptom | Correction |
 |---|---|---|---|
@@ -947,6 +1039,7 @@ REVERSIBLE  ┌─────────────┐
 | A5 | **AI suggestion worship** | Acceptance rate 100%, rejection 0% | Healthy rejection rate ≥ 10% as floor |
 | A6 | **State machine rigidity** | Modules stuck in one state for half a year | Add "overdue migration" alerts |
 | A7 | **Approval ritualism** | Click approve without checking evidence | Mandate "evidence checked" toggle |
+| A8 | **Replace-without-reflux** | REPLACE done, but candidate diffs / cross-review findings / serendipitous patterns never enter the harvest queue; framework / intent never evolve despite signals | Reconciler's REPLACE path must include harvest step (§9.4 step 7); Evolution Curator (§13.2) reviews harvest queue weekly; framework / intent monthly evolution rates included in North Star metrics (§14.2) |
 
 ### 12.3 Out of scope
 
@@ -998,10 +1091,23 @@ Every team needs:
 | 02 | **Intent Designer** | Write intent files; translate business into declarations | L2 Leap ② |
 | 03 | **Harness Engineer** | Build Agent engineering shells; manage heartbeat rhythm | L3 Leap ③ |
 | 04 | **AI Decision Auditor** | Independent of tuning engineer; guard R3-R5 red lines | R-gradient boundary |
+| 05 | **Evolution Curator** | Reviews the Reflux Loop's (§4.1 / §10.6) harvest queue: selects from candidate diffs / cross-review findings / serendipitous patterns which enter framework upgrades, intent revisions, or the pattern library | Reflux Loop's gatekeeper |
 
 ### 13.3 Independence of the AI Decision Auditor
 
 **Key principle**: the AI Decision Auditor must be independent of the AI Agent tuning engineer — to avoid referee = player. This role is mandatory only when AI autonomy enters the R3 cross-domain-write level.
+
+### 13.3a Evolution Curator — gatekeeper of the Reflux Loop
+
+**Why this role**: the Reflux Loop (§4.1) makes by-products of module replacement (candidate diffs / cross-review findings / serendipitous patterns) flow continuously into the harvest queue. But **not all harvested items belong in the framework** — blind inclusion = framework bloat out of control. A role is needed to **periodically review the harvest queue** and decide:
+
+- Which common findings enter the framework / CI / archtest improvement queue
+- Which intent under-specifications enter intent revision drafts
+- Which serendipitous patterns are worth distilling into new framework idioms
+
+**Difference from Auditor**: the Auditor guards boundaries (R3-R5 not breached), the Curator picks evolution direction (where should framework / intent go). The two are complementary, not in conflict.
+
+**Cadence**: weekly review of harvest queue; monthly review of framework upgrade queue; quarterly review of intent revision drafts.
 
 ### 13.4 Capital view of labor reallocation
 
@@ -1012,6 +1118,7 @@ Rising AI autonomy = V being replaced by C. Released V must flow to higher-value
 | L0 → L1 | Manual module tagging | Framework architecture / rule design |
 | L1 → L2 | Health inspection, triage | Health-model design / intent design |
 | L2 → L3 | Experimental module ops | Lifecycle rule design / rollback design |
+| L3 → Reflux Loop | Module code maintenance | **Evolution curation (selecting harvested patterns into the framework)** |
 | Vision | Approval labor | Strategy / safety / ethics gating |
 
 > **What this section answers**: Role evolution is the engineering answer to the "AI replaces engineers" fear — not replacement, but migration to higher value.
@@ -1036,6 +1143,12 @@ This is the single most worth-tracking metric — it simultaneously reflects all
 | L1 | Module manifest coverage / 3-D health trend / state migration rate |
 | L2 | Intent file coverage / field-verifier binding rate / drift detection rate |
 | L3 | AI suggestion acceptance / false alarm rate / R-gradient violations / auto-retirement rollback rate |
+| **Reflux Loop** | **Framework evolution velocity** (new abstractions / retired abstractions per quarter) / **Intent revision rate** (% of mature intents replaced by v2 per quarter) / **Reflux hit rate** (% of harvest queue items adopted into framework / intent) |
+
+**Healthy thresholds for reflux metrics**:
+- Framework evolution velocity: 1–3 changes per quarter (too low = evolution stalled; too high = framework unstable)
+- Intent revision rate: 5%–20% per quarter (too low = intent decoupled from business; too high = intent written too specifically)
+- Reflux hit rate: 20%–50% (too low = harvest signal-to-noise low; too high = Curator filtering too loose)
 
 ### 14.3 DORA five metrics
 
@@ -1096,6 +1209,8 @@ Violating this boundary → trigger §12.4 "when to stop advancing."
               └──────────●──────────┘
 ```
 
+**Concrete mechanism of self-evolving = Reflux Loop (§4.1 / §10.6)**: framework and intent are not designed once and then frozen — they continuously absorb feedback through the harvest step during module replacement, filtered by the Evolution Curator (§13.2) before being upgraded. **Compounding comes from this loop: each replacement raises the starting point of the next.**
+
 ### 15.2 No timeline commitment
 
 Entry conditions for the vision phase (full autonomy) are strict:
@@ -1128,6 +1243,7 @@ Three subjects · three "work" philosophies:
 - **Constant delivery speed** · doesn't decay with codebase age
 - **Failure rate ↓ 50% · onboarding ↓ 60%**
 - Self-feedback · domain experts directly optimize the system
+- **Framework is not designed, it is evolved** — the Reflux Loop (§4.1) lets framework and intent accumulate wisdom with every module replacement; **compounding comes from this loop**
 
 ### 16.2 Individual · LIBERATE · CREATE
 
