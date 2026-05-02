@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_artifacts/
+
+Sitemap: https://ghbvf.github.io/bridle/sitemap.xml

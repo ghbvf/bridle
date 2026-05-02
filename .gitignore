@@ -1,0 +1,21 @@
+# Jekyll build artifacts
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+
+# OS / editor
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Python build helpers
+__pycache__/
+*.pyc
+
+# Derived artifacts (PDF / PPTX / standalone HTML — kept locally only)
+_artifacts/

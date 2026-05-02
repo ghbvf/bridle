@@ -1,0 +1,58 @@
+title: "Bridle · Three Leaps"
+description: "AI-coding governance methodology — let AI code autonomously within framework and harness constraints. Three layers, three leaps, six reversibility tiers."
+url: "https://ghbvf.github.io"
+baseurl: "/bridle"
+lang: en
+author: Bridle
+repository: ghbvf/bridle
+
+# Theme
+theme: jekyll-theme-cayman
+markdown: kramdown
+highlighter: rouge
+
+# Plugins (GitHub Pages whitelist)
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# SEO
+twitter:
+  username: bridle_dev
+  card: summary_large_image
+social:
+  name: Bridle
+  links:
+    - https://github.com/ghbvf/bridle
+logo: /assets/logo.png
+
+# Exclude artifacts and build files from site output
+exclude:
+  - _artifacts
+  - "*.py"
+  - .gitignore
+  - "*.log"
+  - vendor
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+
+# Front-matter defaults (so md files don't all need YAML headers)
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+      lang: en
+  - scope:
+      path: "*.md"
+    values:
+      layout: default
+
+# Kramdown options
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  toc_levels: "1..3"

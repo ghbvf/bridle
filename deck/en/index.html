@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Vibe Coding Governance Engineering — v7 · Three Leaps</title>
+<meta name="description" content="From Acceleration to Liberation — AI's path to autonomous coding under framework and harness constraints. Three layers, three leaps.">
+<link rel="stylesheet" href="../styles.css" />
+<script src="../deck-stage.js"></script>
+</head>
+<body>
+
+<deck-stage width="1920" height="1080">
+
+  <!-- 1. COVER — manifesto-style opening, no longer "seven phases" -->
+  <section data-label="01 Cover">
+    <div class="chrome-tl">VIBE CODING · THREE LEAPS</div>
+    <div class="chrome-tr">2026 · KEYNOTE</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+        <div class="kicker">A MANIFESTO · 2026</div>
+        <h1 class="title-xxl" style="margin-top:32px;">Let AI coding<br/><span style="color:var(--green-deep);">turn from accelerator</span><br/>into <span style="color:var(--green-deep);">liberator</span></h1>
+        <p class="subtitle" style="font-size:38px; margin-top:48px; max-width:1500px;">Three gravity layers · three capability leaps — the engineering path to AI-autonomous coding</p>
+      </div>
+      <div class="row" style="justify-content:space-between; align-items:flex-end;">
+        <div class="label-mono">FROM ACCELERATION TO LIBERATION</div>
+        <div class="label-mono">V7 · 2026.05</div>
+      </div>
+    </div>
+    <div class="chrome-bl">DECK 01 / 15</div>
+    <div class="chrome-br">→ START</div>
+  </section>
+
+  <!-- 2. WHY — The Current Tension, pure diagram -->
+  <section data-label="02 Current Tension">
+    <div class="chrome-tl">§ 01 · WHY NOW</div>
+    <div class="chrome-tr">THE TENSION</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">The Current Tension</div>
+      <h2 class="title-md" style="margin-top:14px;">Code generation has outpaced human verification</h2>
+      <div style="flex:1; margin-top:24px;">
+        <svg viewBox="0 0 1700 500" class="diagram" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#1F2421"/></marker>
+          </defs>
+          <!-- axis -->
+          <line x1="100" y1="380" x2="1400" y2="380" stroke="#1F2421" stroke-width="1.5"/>
+          <line x1="100" y1="380" x2="100" y2="60" stroke="#1F2421" stroke-width="1.5"/>
+          <text x="50" y="60" font-family="var(--f-mono)" font-size="13" letter-spacing="0.16em" fill="#6F756F">capability</text>
+          <text x="1400" y="408" font-family="var(--f-mono)" font-size="13" letter-spacing="0.16em" fill="#6F756F" text-anchor="end">time →</text>
+          <!-- AI generation curve -->
+          <path d="M 100 360 Q 500 340 900 200 T 1400 80" fill="none" stroke="#4F7A4D" stroke-width="3"/>
+          <text x="1420" y="84" font-family="Noto Sans SC" font-size="22" font-weight="600" fill="#4F7A4D">AI coding output</text>
+          <text x="1420" y="108" font-family="var(--f-mono)" font-size="14" fill="#6F756F">exponential growth</text>
+          <!-- Human review curve -->
+          <line x1="100" y1="340" x2="1400" y2="270" stroke="#1F2421" stroke-width="3"/>
+          <text x="1420" y="274" font-family="Noto Sans SC" font-size="22" font-weight="600" fill="#1F2421">human review</text>
+          <text x="1420" y="298" font-family="var(--f-mono)" font-size="14" fill="#6F756F">linear growth</text>
+          <!-- Gap shading -->
+          <path d="M 900 200 Q 1150 140 1400 80 L 1400 270 L 1150 290 L 900 305 Z" fill="#C49A6C" fill-opacity="0.18"/>
+          <text x="1150" y="210" font-family="Noto Sans SC" font-size="36" font-weight="700" fill="#A47A48" text-anchor="middle">Capability Gap</text>
+          <!-- three decays at bottom — labels INSIDE bars -->
+          <g font-family="Noto Sans SC">
+            <text x="100" y="436" font-family="var(--f-mono)" font-size="13" letter-spacing="0.16em" fill="#A47A48">Three Decays</text>
+            <g transform="translate(100, 446)">
+              <rect width="380" height="20" fill="#EAEAE3"/><rect width="320" height="20" fill="#C49A6C"/>
+              <text x="14" y="14" font-size="14" fill="#FFFFFF" font-weight="500">Value Decay</text>
+            </g>
+            <g transform="translate(540, 446)">
+              <rect width="380" height="20" fill="#EAEAE3"/><rect width="280" height="20" fill="#C49A6C"/>
+              <text x="14" y="14" font-size="14" fill="#FFFFFF" font-weight="500">Architecture Decay</text>
+            </g>
+            <g transform="translate(980, 446)">
+              <rect width="380" height="20" fill="#EAEAE3"/><rect width="340" height="20" fill="#C49A6C"/>
+              <text x="14" y="14" font-size="14" fill="#FFFFFF" font-weight="500">Knowledge Decay</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); font-size:24px; font-style:italic; color:var(--ink-2);">AI can't merely accelerate — it must be placed inside a trustworthy engineering system</div>
+    </div>
+    <div class="chrome-bl">02 / 15</div>
+    <div class="chrome-br">→ MASTER MAP</div>
+  </section>
+
+  <!-- 3. MASTER ARCHITECTURE MAP — overview, all later pages zoom into here -->
+  <section data-label="03 Master Map">
+    <div class="chrome-tl">§ 02 · THE MAP</div>
+    <div class="chrome-tr">MASTER ARCHITECTURE</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Master Map · One running case throughout: order service supports group-buy</div>
+      <h2 class="title-md" style="margin-top:14px;">Gravity Gradient · Three Layers × Three Leaps</h2>
+      <div style="flex:1; margin-top:24px;">
+        <svg viewBox="0 0 1700 540" class="diagram">
+          <defs>
+            <marker id="m3a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- L0 base -->
+          <g transform="translate(60, 460)">
+            <rect width="1580" height="60" fill="#EAEAE3" stroke="#1F2421" stroke-width="1.5"/>
+            <text x="20" y="24" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#6F756F">L0 · GRAVITY FIELD</text>
+            <text x="20" y="46" font-family="Noto Sans SC" font-size="22" font-weight="600">Gravity Field · Framework · CI/CD · Gates · Module Identity</text>
+            <text x="1560" y="38" text-anchor="end" font-family="var(--f-mono)" font-size="11" fill="#6F756F">precondition · NOT a phase · the foundation</text>
+          </g>
+          <!-- arrow L0 → L1 -->
+          <line x1="310" y1="460" x2="310" y2="420" stroke="#4F7A4D" stroke-width="2" marker-end="url(#m3a)"/>
+
+          <!-- L1 -->
+          <g transform="translate(60, 320)">
+            <rect width="500" height="80" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+            <text x="20" y="26" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#4F7A4D">L1 · STATE VISIBLE</text>
+            <text x="20" y="56" font-family="Noto Sans SC" font-size="26" font-weight="600">Leap ① State Visible</text>
+            <text x="20" y="76" font-family="Noto Sans SC" font-size="14" fill="#6F756F">Every module has identity · state machine · health signals</text>
+          </g>
+          <!-- arrow L1 → L2 -->
+          <line x1="310" y1="320" x2="310" y2="280" stroke="#4F7A4D" stroke-width="2" marker-end="url(#m3a)"/>
+
+          <!-- L2 -->
+          <g transform="translate(60, 180)">
+            <rect width="500" height="80" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+            <text x="20" y="26" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#4F7A4D">L2 · INTENT EXPRESSIBLE</text>
+            <text x="20" y="56" font-family="Noto Sans SC" font-size="26" font-weight="600">Leap ② Intent Expressible</text>
+            <text x="20" y="76" font-family="Noto Sans SC" font-size="14" fill="#6F756F">Business intent → structured declaration → verifiable contract</text>
+          </g>
+          <!-- arrow L2 → L3 -->
+          <line x1="310" y1="180" x2="310" y2="140" stroke="#4F7A4D" stroke-width="2" marker-end="url(#m3a)"/>
+
+          <!-- L3 -->
+          <g transform="translate(60, 40)">
+            <rect width="500" height="80" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/>
+            <text x="20" y="26" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#4F7A4D">L3 · AUTONOMOUS LOOP</text>
+            <text x="20" y="56" font-family="Noto Sans SC" font-size="26" font-weight="600" fill="#1F2421">Leap ③ Autonomous Loop</text>
+            <text x="20" y="76" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">Harness + Agent · Reconciliation Loop</text>
+          </g>
+
+          <!-- right side: detailed expansion -->
+          <g transform="translate(640, 40)">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#6F756F">EXPANSION · Inside Leap ③</text>
+            <line x1="0" y1="14" x2="1000" y2="14" stroke="#D6D7CF"/>
+            <!-- Harness boxes -->
+            <g transform="translate(0, 30)" font-family="Noto Sans SC">
+              <rect width="180" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">HARNESS</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Engineering Shell</text>
+            </g>
+            <g transform="translate(200, 30)" font-family="Noto Sans SC">
+              <rect width="180" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">AGENT</text>
+              <text x="14" y="44" font-size="18" font-weight="500">AI Agent</text>
+            </g>
+            <g transform="translate(400, 30)" font-family="Noto Sans SC">
+              <rect width="180" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">RECONCILE</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Continuous Convergence</text>
+            </g>
+            <g transform="translate(600, 30)" font-family="Noto Sans SC">
+              <rect width="180" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">GRADIENT</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Autonomy Gradient</text>
+            </g>
+            <g transform="translate(800, 30)" font-family="Noto Sans SC">
+              <rect width="180" height="54" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">SIGNAL</text>
+              <text x="14" y="44" font-size="18" font-weight="500" fill="#1F2421">Health</text>
+            </g>
+            <!-- arrows in line -->
+            <g stroke="#1F2421" stroke-width="1.2" fill="none">
+              <line x1="180" y1="57" x2="200" y2="57"/>
+              <line x1="380" y1="57" x2="400" y2="57"/>
+              <line x1="580" y1="57" x2="600" y2="57"/>
+              <line x1="780" y1="57" x2="800" y2="57"/>
+            </g>
+            <!-- L2 expansion -->
+            <text x="0" y="160" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#6F756F">EXPANSION · Inside Leap ②</text>
+            <line x1="0" y1="174" x2="1000" y2="174" stroke="#D6D7CF"/>
+            <g transform="translate(0, 190)" font-family="Noto Sans SC">
+              <rect width="240" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">INTENT FILE</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Intent Declaration</text>
+            </g>
+            <g transform="translate(260, 190)" font-family="Noto Sans SC">
+              <rect width="240" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">CONTRACT</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Contract + Quality Threshold</text>
+            </g>
+            <g transform="translate(520, 190)" font-family="Noto Sans SC">
+              <rect width="240" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">VERIFIER</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Declaration → Verifier</text>
+            </g>
+            <!-- L1 expansion -->
+            <text x="0" y="290" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#6F756F">EXPANSION · Inside Leap ①</text>
+            <line x1="0" y1="304" x2="1000" y2="304" stroke="#D6D7CF"/>
+            <g transform="translate(0, 320)" font-family="Noto Sans SC">
+              <rect width="190" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">IDENTITY</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Module Identity</text>
+            </g>
+            <g transform="translate(210, 320)" font-family="Noto Sans SC">
+              <rect width="190" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">5-STATE FSM</text>
+              <text x="14" y="44" font-size="18" font-weight="500">State Machine</text>
+            </g>
+            <g transform="translate(420, 320)" font-family="Noto Sans SC">
+              <rect width="190" height="54" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">3-D HEALTH</text>
+              <text x="14" y="44" font-size="18" font-weight="500">Health Signal</text>
+            </g>
+          </g>
+          <!-- vertical thinking-systems gutter on the very right -->
+          <g transform="translate(1690, 40)" font-family="var(--f-mono)" font-size="11" fill="#6F756F" letter-spacing="0.14em" text-anchor="end">
+            <text x="0" y="20">DECLARATIVE · MDM</text>
+            <text x="0" y="200">SYSTEMS · V-MODEL</text>
+            <text x="0" y="360">CAPITAL · DDD</text>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); font-style:italic; color:var(--ink-3); font-size:22px;">This diagram = the "master map" of every following page — each page highlights one spot</div>
+    </div>
+    <div class="chrome-bl">03 / 15</div>
+    <div class="chrome-br">→ L0</div>
+  </section>
+
+  <!-- 4. L0 — gravity field (preconditions, fast pass) -->
+  <section data-label="04 L0 Gravity Field">
+    <div class="chrome-tl">§ L0 · GRAVITY FIELD</div>
+    <div class="chrome-tr">PRECONDITION</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <!-- mini master with L0 highlighted -->
+    <div class="zoom-mini">
+      <div class="zm-label">YOU ARE HERE</div>
+      <svg viewBox="0 0 200 100" style="width:100%; height:90px;">
+        <rect x="2" y="4" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="22" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="40" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="68" width="196" height="22" fill="#7FA877" stroke="#4F7A4D" stroke-width="2"/>
+        <text x="100" y="83" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#1F2421" font-weight="600">L0</text>
+      </svg>
+    </div>
+    <div class="frame" style="right: 360px;">
+      <div class="eyebrow">Precondition · NOT a phase</div>
+      <h2 class="title-md" style="margin-top:14px;">Engineering Gravity Field</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">Before placing AI into a system, the "system" must be built first · this is a physical-law constraint</p>
+      <div style="flex:1; margin-top:18px;">
+        <svg viewBox="0 0 1300 420" class="diagram">
+          <defs>
+            <marker id="m4a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- six pillars in 2 rows × 3 cols -->
+          <g font-family="Noto Sans SC">
+            <g transform="translate(0, 10)">
+              <rect width="420" height="170" fill="#FFFFFF" stroke="#1F2421"/>
+              <rect x="0" y="0" width="420" height="34" fill="#EEF2EA"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">01 · Framework</text>
+              <text x="14" y="68" font-size="22" font-weight="600">Machine tool · Domain abstraction</text>
+              <text x="14" y="98" font-size="14" fill="#6F756F">Domain boundary · Contract skeleton · Quality substrate</text>
+              <text x="14" y="142" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">↳ Better framework · greater AI value</text>
+            </g>
+            <g transform="translate(440, 10)">
+              <rect width="420" height="170" fill="#FFFFFF" stroke="#1F2421"/>
+              <rect x="0" y="0" width="420" height="34" fill="#EEF2EA"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">02 · Module Identity</text>
+              <text x="14" y="68" font-size="22" font-weight="600">Asset Identifiable</text>
+              <text x="14" y="98" font-size="14" fill="#6F756F">module.yaml · identity · intent · state · signals</text>
+              <text x="14" y="142" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">↳ Entry to Leap ①</text>
+            </g>
+            <g transform="translate(880, 10)">
+              <rect width="420" height="170" fill="#FFFFFF" stroke="#1F2421"/>
+              <rect x="0" y="0" width="420" height="34" fill="#EEF2EA"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">03 · CI/CD Gates</text>
+              <text x="14" y="68" font-size="22" font-weight="600">Quality Built-In</text>
+              <text x="14" y="98" font-size="14" fill="#6F756F">lint · type · test · contract · sec scan</text>
+              <text x="14" y="142" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">↳ Left accelerated 100× · right re-armed 3×</text>
+            </g>
+            <g transform="translate(0, 200)">
+              <rect width="420" height="170" fill="#FFFFFF" stroke="#1F2421"/>
+              <rect x="0" y="0" width="420" height="34" fill="#D9E5D2"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">04 · Runtime · NEW</text>
+              <text x="14" y="68" font-size="22" font-weight="600">Runnable Environment</text>
+              <text x="14" y="98" font-size="14" fill="#6F756F">container · K8s · service mesh · registry</text>
+              <text x="14" y="142" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">↳ AI-written code must actually run</text>
+            </g>
+            <g transform="translate(440, 200)">
+              <rect width="420" height="170" fill="#FFFFFF" stroke="#1F2421"/>
+              <rect x="0" y="0" width="420" height="34" fill="#D9E5D2"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">05 · DevOps Stack · NEW</text>
+              <text x="14" y="68" font-size="22" font-weight="600">Deploy · Observe · Rollback</text>
+              <text x="14" y="98" font-size="14" fill="#6F756F">deploy · log · trace · metric · secret · alert</text>
+              <text x="14" y="142" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">↳ When AI errs · seconds-level rollback is mandatory</text>
+            </g>
+            <g transform="translate(880, 200)">
+              <rect width="420" height="170" fill="#FFFFFF" stroke="#1F2421"/>
+              <rect x="0" y="0" width="420" height="34" fill="#EEF2EA"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">06 · Sandbox</text>
+              <text x="14" y="68" font-size="22" font-weight="600">Controlled Trial-and-Error</text>
+              <text x="14" y="98" font-size="14" fill="#6F756F">Isolated · observable · DDD bounded context</text>
+              <text x="14" y="142" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">↳ AI experiments only inside the sandbox</text>
+            </g>
+          </g>
+          <!-- arrow up to L1 -->
+          <line x1="650" y1="380" x2="650" y2="415" stroke="#4F7A4D" stroke-width="2" marker-end="url(#m4a)"/>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); display:flex; justify-content:space-between;">
+        <div class="body-sm">Foundation built · leaps stack on top — skipping L0 = placing AI in a swamp</div>
+        <div class="label-mono" style="color:var(--green-deep);">→ L1 State Visible</div>
+      </div>
+    </div>
+    <div class="chrome-bl">04 / 15</div>
+    <div class="chrome-br">→ L1</div>
+  </section>
+
+  <!-- 5. L1 — STATE VISIBLE — business case first appears -->
+  <section data-label="05 L1 State Visible">
+    <div class="chrome-tl">§ L1 · Leap①</div>
+    <div class="chrome-tr">STATE VISIBLE</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="zoom-mini">
+      <div class="zm-label">YOU ARE HERE</div>
+      <svg viewBox="0 0 200 100" style="width:100%; height:90px;">
+        <rect x="2" y="4" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="22" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="40" width="196" height="14" fill="#7FA877" stroke="#4F7A4D" stroke-width="2"/>
+        <text x="100" y="51" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#1F2421" font-weight="600">L1</text>
+        <rect x="2" y="68" width="196" height="22" fill="#EAEAE3" stroke="#D6D7CF"/>
+      </svg>
+    </div>
+    <div class="frame" style="right: 360px;">
+      <div class="eyebrow">Leap ① · Systems Engineering / 5-State FSM</div>
+      <h2 class="title-md" style="margin-top:14px;">From Code → State</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">Two dimensions · single-module lifecycle + inter-module composition — modules without system assembly = systems engineering failure</p>
+      <div style="flex:1; margin-top:20px; background:var(--paper); border:1px solid var(--rule); padding:24px;">
+        <svg viewBox="0 0 1300 620" class="diagram" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <marker id="m5b" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- top: business case -->
+          <g transform="translate(0, 0)" font-family="Noto Sans SC">
+            <text x="0" y="20" font-family="var(--f-mono)" font-size="12" letter-spacing="0.16em" fill="#4F7A4D">CASE · order service supports group-buy</text>
+          </g>
+          <!-- 5-state FSM -->
+          <g transform="translate(0, 50)" font-family="Noto Sans SC">
+            <g><rect x="0" y="0" width="220" height="70" fill="#FFFFFF" stroke="#1F2421"/><text x="14" y="26" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">STATE 1 · experimental</text><text x="14" y="54" font-size="22" font-weight="600">experimental</text></g>
+            <g><rect x="260" y="0" width="220" height="70" fill="#FFFFFF" stroke="#1F2421"/><text x="274" y="26" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">STATE 2 · candidate</text><text x="274" y="54" font-size="22" font-weight="600">candidate</text></g>
+            <g><rect x="520" y="0" width="220" height="70" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/><text x="534" y="26" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">STATE 3 · asset</text><text x="534" y="54" font-size="22" font-weight="600" fill="#4F7A4D">asset</text></g>
+            <g><rect x="780" y="0" width="220" height="70" fill="#FFFFFF" stroke="#1F2421"/><text x="794" y="26" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">STATE 4 · maintenance</text><text x="794" y="54" font-size="22" font-weight="600">maintenance</text></g>
+            <g><rect x="1040" y="0" width="220" height="70" fill="#EEF2EA" stroke="#1F2421"/><text x="1054" y="26" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">STATE 5 · retired</text><text x="1054" y="54" font-size="22" font-weight="600" fill="#6F756F">retired</text></g>
+            <!-- arrows -->
+            <g stroke="#1F2421" stroke-width="1.4" fill="none">
+              <line x1="220" y1="35" x2="260" y2="35" marker-end="url(#m5b)"/>
+              <line x1="480" y1="35" x2="520" y2="35" marker-end="url(#m5b)"/>
+              <line x1="740" y1="35" x2="780" y2="35" marker-end="url(#m5b)"/>
+              <line x1="1000" y1="35" x2="1040" y2="35" marker-end="url(#m5b)"/>
+            </g>
+            <!-- gates -->
+            <g font-family="var(--f-mono)" font-size="10" fill="#4F7A4D" text-anchor="middle" letter-spacing="0.08em">
+              <text x="240" y="-6">value review</text>
+              <text x="500" y="-6">business signal</text>
+              <text x="760" y="-6" font-weight="600">human review · full gate</text>
+              <text x="1020" y="-6">biz decay</text>
+            </g>
+          </g>
+          <!-- bottom: case progress + 3D health -->
+          <g transform="translate(0, 170)" font-family="Noto Sans SC">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="12" letter-spacing="0.16em" fill="#6F756F">Case progress · current state of group-buy module</text>
+            <line x1="0" y1="14" x2="1260" y2="14" stroke="#D6D7CF"/>
+            <!-- highlight current -->
+            <g transform="translate(260, 30)">
+              <rect width="220" height="60" fill="#EEF2EA" stroke="#4F7A4D" stroke-width="2"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">CURRENT</text>
+              <text x="14" y="46" font-size="20" font-weight="600">candidate · collecting business signals</text>
+            </g>
+            <!-- 3D health -->
+            <g transform="translate(540, 30)">
+              <text x="0" y="0" font-family="var(--f-mono)" font-size="11" fill="#6F756F" letter-spacing="0.14em">3-D HEALTH</text>
+              <g transform="translate(0, 12)">
+                <text x="0" y="14" font-size="13" fill="#6F756F">value</text>
+                <rect x="60" y="2" width="200" height="14" fill="#EAEAE3"/>
+                <rect x="60" y="2" width="160" height="14" fill="#4F7A4D"/>
+                <text x="270" y="14" font-family="var(--f-mono)" font-size="13" fill="#1F2421">80</text>
+              </g>
+              <g transform="translate(0, 32)">
+                <text x="0" y="14" font-size="13" fill="#6F756F">structure</text>
+                <rect x="60" y="2" width="200" height="14" fill="#EAEAE3"/>
+                <rect x="60" y="2" width="130" height="14" fill="#7FA877"/>
+                <text x="270" y="14" font-family="var(--f-mono)" font-size="13" fill="#1F2421">65</text>
+              </g>
+              <g transform="translate(0, 52)">
+                <text x="0" y="14" font-size="13" fill="#6F756F">engineering</text>
+                <rect x="60" y="2" width="200" height="14" fill="#EAEAE3"/>
+                <rect x="60" y="2" width="180" height="14" fill="#9DBF95"/>
+                <text x="270" y="14" font-family="var(--f-mono)" font-size="13" fill="#1F2421">90</text>
+              </g>
+            </g>
+          </g>
+          <!-- bottom: composition view (NEW · module composition) -->
+          <g transform="translate(0, 380)" font-family="Noto Sans SC">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="12" letter-spacing="0.16em" fill="#4F7A4D">Module composition · system assembly view</text>
+            <line x1="0" y1="14" x2="1260" y2="14" stroke="#D6D7CF"/>
+            <!-- composition graph -->
+            <g transform="translate(20, 36)">
+              <rect width="180" height="50" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="10" fill="#9A9F99">user-svc</text>
+              <text x="14" y="40" font-size="14" font-weight="500">user</text>
+            </g>
+            <g transform="translate(240, 36)">
+              <rect width="180" height="50" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="10" fill="#4F7A4D">order.group-buy</text>
+              <text x="14" y="40" font-size="14" font-weight="600" fill="#1F2421">group-buy module</text>
+            </g>
+            <g transform="translate(460, 36)">
+              <rect width="180" height="50" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="10" fill="#9A9F99">payment.coupon</text>
+              <text x="14" y="40" font-size="14" font-weight="500">coupon-pay</text>
+            </g>
+            <g transform="translate(680, 36)">
+              <rect width="180" height="50" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="10" fill="#9A9F99">notify-svc</text>
+              <text x="14" y="40" font-size="14" font-weight="500">notify</text>
+            </g>
+            <g transform="translate(900, 36)">
+              <rect width="180" height="50" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="22" font-family="var(--f-mono)" font-size="10" fill="#9A9F99">inventory</text>
+              <text x="14" y="40" font-size="14" font-weight="500">inventory</text>
+            </g>
+            <!-- arrows -->
+            <g stroke="#4F7A4D" stroke-width="1.5" fill="none">
+              <line x1="200" y1="61" x2="240" y2="61" marker-end="url(#m5b)"/>
+              <line x1="420" y1="61" x2="460" y2="61" marker-end="url(#m5b)"/>
+              <line x1="330" y1="86" x2="330" y2="106" marker-end="url(#m5b)"/>
+              <line x1="640" y1="61" x2="680" y2="61" marker-end="url(#m5b)"/>
+              <line x1="860" y1="61" x2="900" y2="61" marker-end="url(#m5b)"/>
+            </g>
+            <!-- contract bar below -->
+            <g transform="translate(240, 100)">
+              <rect width="180" height="22" fill="#EEF2EA" stroke="#9DBF95"/>
+              <text x="14" y="16" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">contract: GroupOrder</text>
+            </g>
+            <!-- right side: composition health -->
+            <g transform="translate(1100, 30)">
+              <text x="0" y="0" font-family="var(--f-mono)" font-size="11" fill="#6F756F" letter-spacing="0.14em">SYSTEM</text>
+              <text x="0" y="22" font-size="13" fill="#1F2421">5-hop assembly</text>
+              <text x="0" y="42" font-size="13" fill="#1F2421">weakest 65</text>
+              <text x="0" y="68" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" font-weight="600">system ≠ module mean</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); display:flex; justify-content:space-between;">
+        <div class="body-sm"><strong>Input</strong> from L0 framework + gates · <strong>Output</strong> to L2: declarable state</div>
+        <div class="label-mono" style="color:var(--green-deep);">→ L2 Intent Expressible</div>
+      </div>
+    </div>
+    <div class="chrome-bl">05 / 15</div>
+    <div class="chrome-br">→ L2</div>
+  </section>
+
+  <!-- 6. L1 → L2 transition page: what a single signal can tell us (BRIDGE) -->
+  <section data-label="06 Signal → Intent">
+    <div class="chrome-tl">§ BRIDGE · L1 → L2</div>
+    <div class="chrome-tr">SIGNAL → INTENT</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Progression · Bridge</div>
+      <h2 class="title-md" style="margin-top:14px;">Seeing state → enables describing intent</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">L1 turns every module into an "observable object" · L2 turns every change into a "declarable event"</p>
+      <div style="flex:1; margin-top:20px;">
+        <svg viewBox="0 0 1700 420" class="diagram">
+          <defs>
+            <marker id="m6a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L10,6 L0,12 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- left: signals (L1 output) -->
+          <g transform="translate(40, 30)" font-family="Noto Sans SC">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="13" letter-spacing="0.18em" fill="#6F756F">L1 OUTPUT · signals</text>
+            <g transform="translate(0, 28)"><rect width="500" height="48" fill="#FFFFFF" stroke="#1F2421"/><text x="14" y="32" font-family="var(--f-mono)" font-size="14" fill="#1F2421">order-service.discount · call rate ↓ 73% / 30d</text></g>
+            <g transform="translate(0, 88)"><rect width="500" height="48" fill="#FFFFFF" stroke="#1F2421"/><text x="14" y="32" font-family="var(--f-mono)" font-size="14" fill="#1F2421">order-service.group-buy · error rate 2.1%</text></g>
+            <g transform="translate(0, 148)"><rect width="500" height="48" fill="#FFFFFF" stroke="#1F2421"/><text x="14" y="32" font-family="var(--f-mono)" font-size="14" fill="#1F2421">payment.coupon · Health 91 / 90 / 88</text></g>
+            <g transform="translate(0, 208)"><rect width="500" height="48" fill="#EAEAE3" stroke="#9A9F99" stroke-dasharray="3 3"/><text x="14" y="32" font-family="var(--f-mono)" font-size="14" fill="#6F756F">…live portraits of hundreds of modules</text></g>
+            <text x="0" y="304" font-size="18" fill="#6F756F">Raw signals alone → a data deluge with no direction</text>
+          </g>
+          <!-- arrow center -->
+          <g transform="translate(640, 200)">
+            <line x1="0" y1="0" x2="160" y2="0" stroke="#4F7A4D" stroke-width="3" marker-end="url(#m6a)"/>
+            <text x="80" y="-20" text-anchor="middle" font-family="var(--f-mono)" font-size="14" letter-spacing="0.16em" fill="#4F7A4D">Need intent</text>
+            <text x="80" y="32" text-anchor="middle" font-family="Noto Sans SC" font-size="16" fill="#4A4F4B">to compare / to act</text>
+          </g>
+          <!-- right: intent skeleton (preview of L2) -->
+          <g transform="translate(880, 30)" font-family="Noto Sans SC">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="13" letter-spacing="0.18em" fill="#4F7A4D">L2 INPUT · intent</text>
+            <g transform="translate(0, 28)">
+              <rect width="780" height="290" fill="#1F2421"/>
+              <text x="20" y="36" font-family="var(--f-mono)" font-size="12" fill="#9DBF95" letter-spacing="0.16em">INTENT · ORDER-SERVICE / GROUP-BUY</text>
+              <line x1="20" y1="50" x2="760" y2="50" stroke="#4A4F4B"/>
+              <text x="20" y="84" font-family="Noto Sans SC" font-size="22" font-weight="500" fill="#FFFFFF">"Let the order service support group-buy,</text>
+              <text x="20" y="116" font-family="Noto Sans SC" font-size="22" font-weight="500" fill="#FFFFFF">paying via coupon code, p99 &lt; 200ms"</text>
+              <line x1="20" y1="140" x2="760" y2="140" stroke="#4A4F4B"/>
+              <text x="20" y="172" font-family="var(--f-mono)" font-size="14" fill="#9DBF95">↓ AI translation ↓</text>
+              <text x="20" y="200" font-family="var(--f-mono)" font-size="14" fill="#FFFFFF">contract: POST /orders/group</text>
+              <text x="20" y="222" font-family="var(--f-mono)" font-size="14" fill="#FFFFFF">sla.p99: 200ms · sla.error: 0.5%</text>
+              <text x="20" y="244" font-family="var(--f-mono)" font-size="14" fill="#FFFFFF">depends_on: payment.coupon (≥85)</text>
+              <text x="20" y="266" font-family="var(--f-mono)" font-size="14" fill="#9DBF95">success: signals.usage ≥ 1k/d</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); font-style:italic; color:var(--ink-2); font-size:22px;">Without L1 state visibility · L2 intent is just a blank check</div>
+    </div>
+    <div class="chrome-bl">06 / 15</div>
+    <div class="chrome-br">→ L2</div>
+  </section>
+
+  <!-- 7. L2 — INTENT EXPRESSIBLE — show intent declaration in detail -->
+  <section data-label="07 L2 Intent Expressible">
+    <div class="chrome-tl">§ L2 · Leap②</div>
+    <div class="chrome-tr">INTENT EXPRESSIBLE</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="zoom-mini">
+      <div class="zm-label">YOU ARE HERE</div>
+      <svg viewBox="0 0 200 100" style="width:100%; height:90px;">
+        <rect x="2" y="4" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="22" width="196" height="14" fill="#7FA877" stroke="#4F7A4D" stroke-width="2"/>
+        <text x="100" y="33" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#1F2421" font-weight="600">L2</text>
+        <rect x="2" y="40" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="68" width="196" height="22" fill="#EAEAE3" stroke="#D6D7CF"/>
+      </svg>
+    </div>
+    <div class="frame" style="right: 360px;">
+      <div class="eyebrow">Leap ② · Declarative · MDM paradigm reborn</div>
+      <h2 class="title-md" style="margin-top:14px;">From Command → Intent</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">Not by applying MDM directly · but by re-embedding the "declare + converge" paradigm at the code layer</p>
+      <div class="row" style="flex:1; gap:20px; margin-top:20px;">
+        <!-- left: 4-block intent file structure -->
+        <div class="col" style="flex:1.1; background:#1F2421; padding:24px; gap:0;">
+          <div style="font-family:var(--f-mono); font-size:11px; letter-spacing:0.18em; color:var(--green-mid);">INTENT FILE · ORDER-SERVICE / GROUP-BUY</div>
+          <div style="height:1px; background:#3A3F3A; margin:12px 0 16px;"></div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; flex:1;">
+            <div style="border:1px solid #3A3F3A; padding:14px;">
+              <div style="font-family:var(--f-mono); font-size:11px; color:#9DBF95; letter-spacing:0.14em;">01 · BUSINESS</div>
+              <div style="font-size:18px; font-weight:600; color:#FFFFFF; margin-top:8px;">Business Intent</div>
+              <pre style="font-family:var(--f-mono); font-size:13px; color:#D6D7CF; margin:8px 0 0; line-height:1.5;">goal: group-buy ordering
+metric: GMV ↑ 15%
+deadline: 2026-Q2</pre>
+            </div>
+            <div style="border:1px solid #3A3F3A; padding:14px;">
+              <div style="font-family:var(--f-mono); font-size:11px; color:#9DBF95; letter-spacing:0.14em;">02 · CONTRACT</div>
+              <div style="font-size:18px; font-weight:600; color:#FFFFFF; margin-top:8px;">Technical Contract</div>
+              <pre style="font-family:var(--f-mono); font-size:13px; color:#D6D7CF; margin:8px 0 0; line-height:1.5;">api: POST /orders/group
+schema: GroupOrder
+events: [GroupCreated]</pre>
+            </div>
+            <div style="border:1px solid #3A3F3A; padding:14px;">
+              <div style="font-family:var(--f-mono); font-size:11px; color:#9DBF95; letter-spacing:0.14em;">03 · QUALITY</div>
+              <div style="font-size:18px; font-weight:600; color:#FFFFFF; margin-top:8px;">Quality Threshold</div>
+              <pre style="font-family:var(--f-mono); font-size:13px; color:#D6D7CF; margin:8px 0 0; line-height:1.5;">p99: 200ms
+error: &lt; 0.5%
+coverage: ≥ 95%</pre>
+            </div>
+            <div style="border:1px solid var(--green); padding:14px; background:rgba(127,168,119,0.08);">
+              <div style="font-family:var(--f-mono); font-size:11px; color:#9DBF95; letter-spacing:0.14em;">04 · LIFECYCLE</div>
+              <div style="font-size:18px; font-weight:600; color:#FFFFFF; margin-top:8px;">Lifecycle</div>
+              <pre style="font-family:var(--f-mono); font-size:13px; color:#D6D7CF; margin:8px 0 0; line-height:1.5;">state: candidate
+sunset_if: usage &lt; 100/d
+review_at: 30d</pre>
+            </div>
+          </div>
+          <div style="margin-top:14px; padding-top:14px; border-top:1px solid #3A3F3A; font-family:var(--f-mono); font-size:12px; color:var(--green-mid);">This is the Manifest in plain sight — not an abstract concept, but these four blocks</div>
+        </div>
+        <!-- right: why this beats imperative -->
+        <div class="col" style="flex:1; gap:14px;">
+          <div class="card-deep">
+            <div class="label-mono" style="color:var(--green-deep);">Not documentation · executable</div>
+            <div style="font-size:24px; font-weight:600; margin-top:10px;">Every field maps directly to a verifier</div>
+            <div class="body-sm" style="margin-top:10px;">p99 → perf test · contract → contract test · sunset_if → auto alert</div>
+          </div>
+          <div class="card">
+            <div class="label-mono" style="color:var(--green-deep);">MDM creative application</div>
+            <div style="font-size:20px; font-weight:500; margin-top:8px;">Device → software module</div>
+            <div class="body-sm" style="margin-top:8px;">Devices pull declarations · modules pull intents; devices auto-configure · modules self-evolve. Isomorphic, not identical.</div>
+          </div>
+          <div class="card">
+            <div class="label-mono" style="color:var(--green-deep);">What business need it solves</div>
+            <div class="body-sm" style="margin-top:8px;"><strong>Group-buy requirement</strong>is no longer a PRD doc + scheduling meeting + Jira ticket, but an intent file — declared, delivered, and monitored simultaneously.</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:18px; padding-top:14px; border-top:1px solid var(--rule); display:flex; justify-content:space-between;">
+        <div class="body-sm"><strong>Input</strong> L1 state · <strong>Output</strong> to L3: targets executable by an Agent</div>
+        <div class="label-mono" style="color:var(--green-deep);">→ L3 Autonomous Loop</div>
+      </div>
+    </div>
+    <div class="chrome-bl">07 / 15</div>
+    <div class="chrome-br">→ L3</div>
+  </section>
+
+  <!-- 8. L2 → L3 BRIDGE: declaration → executable -->
+  <section data-label="08 Intent → Execution">
+    <div class="chrome-tl">§ BRIDGE · L2 → L3</div>
+    <div class="chrome-tr">INTENT → EXECUTION</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Progression · Bridge</div>
+      <h2 class="title-md" style="margin-top:14px;">Once declared → an "executor" is needed</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">L1 FSM says "where we are" · L2 intent says "where to go" · L3 Harness is "how to automatically get there"</p>
+      <div style="flex:1; margin-top:24px;">
+        <svg viewBox="0 0 1700 420" class="diagram">
+          <defs>
+            <marker id="m8a" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L10,6 L0,12 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- intent file mini -->
+          <g transform="translate(40, 60)">
+            <rect width="380" height="280" fill="#1F2421"/>
+            <text x="20" y="32" font-family="var(--f-mono)" font-size="11" fill="#9DBF95" letter-spacing="0.14em">DESIRED STATE · INTENT</text>
+            <line x1="20" y1="46" x2="360" y2="46" stroke="#3A3F3A"/>
+            <text x="20" y="78" font-family="Noto Sans SC" font-size="20" fill="#FFFFFF" font-weight="500">group-buy ordering</text>
+            <text x="20" y="104" font-family="var(--f-mono)" font-size="13" fill="#D6D7CF">p99 200ms · 95% cov</text>
+            <text x="20" y="130" font-family="var(--f-mono)" font-size="13" fill="#D6D7CF">contract: GroupOrder</text>
+            <line x1="20" y1="150" x2="360" y2="150" stroke="#3A3F3A"/>
+            <text x="20" y="182" font-family="var(--f-mono)" font-size="11" fill="#9DBF95" letter-spacing="0.14em">CURRENT STATE · L1 SIGNALS</text>
+            <text x="20" y="216" font-family="var(--f-mono)" font-size="13" fill="#D6D7CF">api: not implemented</text>
+            <text x="20" y="240" font-family="var(--f-mono)" font-size="13" fill="#C49A6C">delta: missing</text>
+          </g>
+          <!-- arrow with controller -->
+          <g transform="translate(450, 200)">
+            <line x1="0" y1="0" x2="240" y2="0" stroke="#4F7A4D" stroke-width="3" marker-end="url(#m8a)"/>
+            <text x="120" y="-30" text-anchor="middle" font-family="var(--f-mono)" font-size="13" letter-spacing="0.14em" fill="#4F7A4D">DRIFT DETECTED</text>
+            <text x="120" y="34" text-anchor="middle" font-family="Noto Sans SC" font-size="16" fill="#4A4F4B">desired ≠ current</text>
+          </g>
+          <!-- agent box -->
+          <g transform="translate(720, 60)">
+            <rect width="380" height="280" fill="#FFFFFF" stroke="#4F7A4D" stroke-width="2"/>
+            <rect x="0" y="0" width="380" height="40" fill="#EEF2EA"/>
+            <text x="20" y="26" font-family="var(--f-mono)" font-size="12" letter-spacing="0.16em" fill="#4F7A4D">AI AGENT · autonomous task loop</text>
+            <g transform="translate(20, 60)" font-family="Noto Sans SC">
+              <text x="0" y="0" font-size="14" font-family="var(--f-mono)" fill="#9A9F99">01</text>
+              <text x="32" y="0" font-size="16" fill="#1F2421">read intent + current signals</text>
+              <text x="0" y="34" font-size="14" font-family="var(--f-mono)" fill="#9A9F99">02</text>
+              <text x="32" y="34" font-size="16" fill="#1F2421">plan tasks · decompose steps</text>
+              <text x="0" y="68" font-size="14" font-family="var(--f-mono)" fill="#9A9F99">03</text>
+              <text x="32" y="68" font-size="16" fill="#1F2421">invoke tools inside Harness</text>
+              <text x="0" y="102" font-size="14" font-family="var(--f-mono)" fill="#9A9F99">04</text>
+              <text x="32" y="102" font-size="16" fill="#1F2421">write code · run tests · self-verify</text>
+              <text x="0" y="136" font-size="14" font-family="var(--f-mono)" fill="#9A9F99">05</text>
+              <text x="32" y="136" font-size="16" fill="#1F2421">open PR · wait gates · collect signals</text>
+              <text x="0" y="170" font-size="14" font-family="var(--f-mono)" fill="#4F7A4D">06</text>
+              <text x="32" y="170" font-size="16" fill="#4F7A4D" font-weight="600">failed → back to 01</text>
+            </g>
+          </g>
+          <!-- arrow back -->
+          <g transform="translate(1130, 200)">
+            <line x1="0" y1="0" x2="240" y2="0" stroke="#4F7A4D" stroke-width="3" marker-end="url(#m8a)"/>
+            <text x="120" y="-30" text-anchor="middle" font-family="var(--f-mono)" font-size="13" letter-spacing="0.14em" fill="#4F7A4D">CONVERGED</text>
+            <text x="120" y="34" text-anchor="middle" font-family="Noto Sans SC" font-size="16" fill="#4A4F4B">desired = current</text>
+          </g>
+          <!-- delivered box -->
+          <g transform="translate(1400, 60)">
+            <rect width="260" height="280" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/>
+            <text x="20" y="32" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">DELIVERED</text>
+            <text x="20" y="74" font-family="Noto Sans SC" font-size="22" font-weight="600" fill="#1F2421">Group-buy feature is live</text>
+            <text x="20" y="102" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">api: ✓ implemented</text>
+            <text x="20" y="124" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">p99: 178ms ✓</text>
+            <text x="20" y="146" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">coverage: 96% ✓</text>
+            <text x="20" y="168" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">state: candidate</text>
+            <line x1="20" y1="190" x2="240" y2="190" stroke="#4F7A4D" stroke-dasharray="2 3"/>
+            <text x="20" y="216" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">→ L1 FSM continues</text>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); font-style:italic; color:var(--ink-2); font-size:22px;">Key: the loop is not "one-shot inference" · it is "continuous until intent is met"</div>
+    </div>
+    <div class="chrome-bl">08 / 15</div>
+    <div class="chrome-br">→ L3</div>
+  </section>
+
+  <!-- 9. L3 — Harness + Agent loop, more nuanced -->
+  <section data-label="09 L3 Autonomous Loop">
+    <div class="chrome-tl">§ L3 · Leap③</div>
+    <div class="chrome-tr">AUTONOMOUS LOOP</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="zoom-mini">
+      <div class="zm-label">YOU ARE HERE</div>
+      <svg viewBox="0 0 200 100" style="width:100%; height:90px;">
+        <rect x="2" y="4" width="196" height="14" fill="#7FA877" stroke="#4F7A4D" stroke-width="2"/>
+        <text x="100" y="15" text-anchor="middle" font-family="JetBrains Mono" font-size="9" fill="#1F2421" font-weight="600">L3</text>
+        <rect x="2" y="22" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="40" width="196" height="14" fill="#FFFFFF" stroke="#D6D7CF"/>
+        <rect x="2" y="68" width="196" height="22" fill="#EAEAE3" stroke="#D6D7CF"/>
+      </svg>
+    </div>
+    <div class="frame" style="right: 360px;">
+      <div class="eyebrow">Leap ③ · isomorphic to K8s controller · Apple DDM</div>
+      <h2 class="title-md" style="margin-top:14px;">From one-shot inference → continuous self-governance</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">The Agent's context and progress · mostly <strong>progressively disclosed</strong> from L1 system state · no need to conjure</p>
+      <div style="flex:1; margin-top:20px; background:var(--paper); border:1px solid var(--rule); padding:20px;">
+        <svg viewBox="0 0 1300 380" class="diagram">
+          <defs>
+            <marker id="m9a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- left: L1 state as source -->
+          <g transform="translate(20, 30)" font-family="Noto Sans SC">
+            <rect width="280" height="320" fill="#FFFFFF" stroke="#4F7A4D" stroke-width="2"/>
+            <rect x="0" y="0" width="280" height="36" fill="#D9E5D2"/>
+            <text x="14" y="24" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">L1 STATE · source</text>
+            <g transform="translate(14, 56)">
+              <text y="14" font-size="13" fill="#1F2421" font-weight="500">System Design</text>
+              <text y="34" font-family="var(--f-mono)" font-size="11" fill="#6F756F">DDD boundary · context map</text>
+              <text y="62" font-size="13" fill="#1F2421" font-weight="500">API · Contract</text>
+              <text y="82" font-family="var(--f-mono)" font-size="11" fill="#6F756F">openapi · proto</text>
+              <text y="110" font-size="13" fill="#1F2421" font-weight="500">UI Design</text>
+              <text y="130" font-family="var(--f-mono)" font-size="11" fill="#6F756F">design tokens · flows</text>
+              <text y="158" font-size="13" fill="#1F2421" font-weight="500">Progress</text>
+              <text y="178" font-family="var(--f-mono)" font-size="11" fill="#6F756F">tasks · PRs · signals</text>
+              <text y="206" font-size="13" fill="#1F2421" font-weight="500">Health</text>
+              <text y="226" font-family="var(--f-mono)" font-size="11" fill="#6F756F">value / structure / engineering scores</text>
+              <text y="262" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">ALL RECORDED</text>
+            </g>
+          </g>
+          <!-- arrow: progressive disclosure -->
+          <g transform="translate(310, 180)" font-family="var(--f-mono)">
+            <line x1="0" y1="0" x2="100" y2="0" stroke="#4F7A4D" stroke-width="2.5" marker-end="url(#m9a)"/>
+            <text x="50" y="-12" text-anchor="middle" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">progressive disclosure</text>
+            <text x="50" y="22" text-anchor="middle" font-size="11" fill="#6F756F">progressive</text>
+          </g>
+          <!-- middle: Harness with Agent -->
+          <g transform="translate(430, 30)">
+            <rect width="540" height="320" fill="#EEF2EA" stroke="#4F7A4D" stroke-width="2" stroke-dasharray="6 4"/>
+            <text x="20" y="28" font-family="var(--f-mono)" font-size="12" letter-spacing="0.18em" fill="#4F7A4D">HARNESS · engineering shell</text>
+            <!-- agent core -->
+            <g transform="translate(160, 60)" font-family="Noto Sans SC">
+              <rect width="220" height="100" fill="#FFFFFF" stroke="#4F7A4D" stroke-width="2"/>
+              <text x="16" y="26" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">AGENT · brain</text>
+              <text x="16" y="56" font-size="22" font-weight="600" fill="#1F2421">AI Agent</text>
+              <text x="16" y="80" font-family="var(--f-mono)" font-size="12" fill="#6F756F">plan · act · observe</text>
+            </g>
+            <!-- TOOLS · constrained -->
+            <g transform="translate(20, 200)" font-family="Noto Sans SC">
+              <rect width="240" height="90" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">TOOLS · constrained</text>
+              <text x="14" y="50" font-size="16" font-weight="500">whitelisted actions</text>
+              <text x="14" y="74" font-family="var(--f-mono)" font-size="11" fill="#6F756F">audit · sandbox</text>
+            </g>
+            <!-- EVAL · heartbeat -->
+            <g transform="translate(280, 200)" font-family="Noto Sans SC">
+              <rect width="240" height="90" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/>
+              <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">EVAL · heartbeat</text>
+              <text x="14" y="50" font-size="16" font-weight="600">continuous self-verify</text>
+              <text x="14" y="74" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">drift detect · loop</text>
+            </g>
+            <!-- arrows in agent -->
+            <g stroke="#1F2421" stroke-width="1.4" fill="none">
+              <line x1="200" y1="160" x2="160" y2="200" marker-end="url(#m9a)"/>
+              <line x1="340" y1="160" x2="380" y2="200" marker-end="url(#m9a)"/>
+            </g>
+          </g>
+          <!-- right: writes back to L1 -->
+          <g transform="translate(990, 180)" font-family="var(--f-mono)">
+            <line x1="0" y1="0" x2="100" y2="0" stroke="#4F7A4D" stroke-width="2.5" marker-end="url(#m9a)"/>
+            <text x="50" y="-12" text-anchor="middle" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">write back state</text>
+          </g>
+          <g transform="translate(1110, 30)" font-family="Noto Sans SC">
+            <rect width="170" height="320" fill="#FFFFFF" stroke="#1F2421"/>
+            <text x="14" y="24" font-family="var(--f-mono)" font-size="11" letter-spacing="0.14em" fill="#4F7A4D">RECONCILE</text>
+            <text x="14" y="62" font-size="18" font-weight="600">system state</text>
+            <text x="14" y="86" font-size="13" fill="#6F756F">converge toward intent</text>
+            <line x1="14" y1="110" x2="156" y2="110" stroke="#D6D7CF"/>
+            <text x="14" y="138" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">heartbeat cadence</text>
+            <text x="14" y="160" font-family="var(--f-mono)" font-size="11" fill="#1F2421">∞ loop</text>
+          </g>
+          <!-- bottom feedback line -->
+          <path d="M 1195 350 Q 1195 380 600 380 Q 160 380 160 350" stroke="#4F7A4D" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+          <text x="650" y="396" text-anchor="middle" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">↑ state changes feed back to L1 · input for next cycle</text>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:14px; border-top:1px solid var(--rule); display:flex; justify-content:space-between;">
+        <div class="body-sm"><strong>Key</strong> Not smarter AI · a more stable 'shell + heartbeat'</div>
+        <div class="label-mono" style="color:var(--green-deep);">→ AUTONOMY GRADIENT</div>
+      </div>
+    </div>
+    <div class="chrome-bl">09 / 15</div>
+    <div class="chrome-br">→ R0-R5</div>
+  </section>
+
+  <!-- 10. AUTONOMY GRADIENT — improved unified light theme -->
+  <section data-label="10 Autonomy Gradient">
+    <div class="chrome-tl">§ L3+ · GRADIENT</div>
+    <div class="chrome-tr">REVERSIBILITY</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Inside L3 · Autonomy Gradient</div>
+      <h2 class="title-md" style="margin-top:14px;">Not "AI in full control" · but "AI takes over reversible actions"</h2>
+      <div style="flex:1; margin-top:32px;">
+        <svg viewBox="0 0 1700 380" class="diagram">
+          <defs>
+            <linearGradient id="rg" x1="0" x2="1">
+              <stop offset="0%" stop-color="#9DBF95" stop-opacity="0.50"/>
+              <stop offset="50%" stop-color="#C49A6C" stop-opacity="0.40"/>
+              <stop offset="100%" stop-color="#1F2421" stop-opacity="0.85"/>
+            </linearGradient>
+          </defs>
+          <!-- gradient axis -->
+          <rect x="40" y="40" width="1620" height="14" fill="url(#rg)" stroke="#D6D7CF"/>
+          <text x="40" y="28" font-family="var(--f-mono)" font-size="13" letter-spacing="0.16em" fill="#6F756F">REVERSIBILITY</text>
+          <text x="40" y="80" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">reversible ←</text>
+          <text x="1660" y="80" text-anchor="end" font-family="var(--f-mono)" font-size="11" fill="#1F2421">→ irreversible</text>
+          <!-- 6 levels, all light theme aligned -->
+          <g transform="translate(40, 110)" font-family="Noto Sans SC">
+            <g transform="translate(0,0)"><rect width="260" height="240" fill="#FFFFFF" stroke="#4F7A4D"/><rect x="0" y="0" width="260" height="34" fill="#EEF2EA"/><text x="14" y="22" font-family="var(--f-mono)" font-size="12" fill="#4F7A4D" letter-spacing="0.14em">R0 · READ</text><text x="14" y="68" font-size="22" font-weight="600">Read-only analysis</text><text x="14" y="100" font-size="14" fill="#6F756F">inspect code · propose</text><text x="14" y="180" font-size="16" fill="#4F7A4D" font-weight="600">AI fully automated</text><text x="14" y="208" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">no human</text></g>
+            <g transform="translate(280,0)"><rect width="260" height="240" fill="#FFFFFF" stroke="#4F7A4D"/><rect x="0" y="0" width="260" height="34" fill="#EEF2EA"/><text x="14" y="22" font-family="var(--f-mono)" font-size="12" fill="#4F7A4D" letter-spacing="0.14em">R1 · LOCAL</text><text x="14" y="68" font-size="22" font-weight="600">Local edits</text><text x="14" y="100" font-size="14" fill="#6F756F">edit own repo · unit-test guarded</text><text x="14" y="180" font-size="16" fill="#4F7A4D" font-weight="600">AI automated</text><text x="14" y="208" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">git rollback</text></g>
+            <g transform="translate(560,0)"><rect width="260" height="240" fill="#FFFFFF" stroke="#C49A6C"/><rect x="0" y="0" width="260" height="34" fill="#ECDCC4"/><text x="14" y="22" font-family="var(--f-mono)" font-size="12" fill="#A47A48" letter-spacing="0.14em">R2 · CONTROLLED</text><text x="14" y="68" font-size="22" font-weight="600">Controlled external</text><text x="14" y="100" font-size="14" fill="#6F756F">sandbox API · test env</text><text x="14" y="180" font-size="16" fill="#A47A48" font-weight="600">AI auto-released</text><text x="14" y="208" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">audit log</text></g>
+            <g transform="translate(840,0)"><rect width="260" height="240" fill="#FFFFFF" stroke="#C49A6C"/><rect x="0" y="0" width="260" height="34" fill="#ECDCC4"/><text x="14" y="22" font-family="var(--f-mono)" font-size="12" fill="#A47A48" letter-spacing="0.14em">R3 · CROSS</text><text x="14" y="68" font-size="22" font-weight="600">Cross-domain write</text><text x="14" y="100" font-size="14" fill="#6F756F">modify other services · migrations</text><text x="14" y="180" font-size="16" fill="#A47A48" font-weight="600">AI proposes + human review</text><text x="14" y="208" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">staged rollout</text></g>
+            <g transform="translate(1120,0)"><rect width="260" height="240" fill="#FFFFFF" stroke="#1F2421" stroke-width="2"/><rect x="0" y="0" width="260" height="34" fill="#1F2421"/><text x="14" y="22" font-family="var(--f-mono)" font-size="12" fill="#9DBF95" letter-spacing="0.14em">R4 · USER IMPACT</text><text x="14" y="68" font-size="22" font-weight="600">User impact</text><text x="14" y="100" font-size="14" fill="#6F756F">delete data · modify billing</text><text x="14" y="180" font-size="16" fill="#1F2421" font-weight="600">human review · never granted</text><text x="14" y="208" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">human gate</text></g>
+            <g transform="translate(1400,0)"><rect width="260" height="240" fill="#FFFFFF" stroke="#1F2421" stroke-width="2"/><rect x="0" y="0" width="260" height="34" fill="#1F2421"/><text x="14" y="22" font-family="var(--f-mono)" font-size="12" fill="#9DBF95" letter-spacing="0.14em">R5 · IRREVERSIBLE</text><text x="14" y="68" font-size="22" font-weight="600">Funds · Physical</text><text x="14" y="100" font-size="14" fill="#6F756F">money transfer · device control</text><text x="14" y="180" font-size="16" fill="#1F2421" font-weight="600">human decision · red line</text><text x="14" y="208" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">never auto</text></g>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); font-style:italic; color:var(--ink-2); font-size:22px;">Give reversible actions to AI · keep irreversible actions for humans — that is true liberation</div>
+    </div>
+    <div class="chrome-bl">10 / 15</div>
+    <div class="chrome-br">→ FULL LOOP</div>
+  </section>
+
+  <!-- 11. FULL LOOP — putting it all together with case -->
+  <section data-label="11 Full Loop">
+    <div class="chrome-tl">§ FULL LOOP</div>
+    <div class="chrome-tr">CASE END-TO-END</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Whole-and-parts overview</div>
+      <h2 class="title-md" style="margin-top:14px;">Full Loop · group-buy feature from declaration to live</h2>
+      <div style="flex:1; margin-top:24px; background:var(--paper); border:1px solid var(--rule); padding:24px;">
+        <svg viewBox="0 0 1500 400" class="diagram">
+          <defs>
+            <marker id="m11a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- 5 stages of one case -->
+          <g font-family="Noto Sans SC">
+            <g transform="translate(0, 80)">
+              <rect width="280" height="200" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">STEP 1 · L2</text>
+              <text x="14" y="60" font-size="22" font-weight="600">Human writes intent</text>
+              <text x="14" y="86" font-family="Noto Sans SC" font-size="14" fill="#6F756F">"group-buy ordering"</text>
+              <text x="14" y="106" font-family="Noto Sans SC" font-size="14" fill="#6F756F">+ p99 200ms</text>
+              <line x1="14" y1="130" x2="266" y2="130" stroke="#D6D7CF"/>
+              <text x="14" y="160" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">3 min</text>
+              <text x="14" y="180" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">human · L2</text>
+            </g>
+            <g transform="translate(305, 80)">
+              <rect width="280" height="200" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">STEP 2 · L3</text>
+              <text x="14" y="60" font-size="22" font-weight="600">Agent takes over</text>
+              <text x="14" y="86" font-family="Noto Sans SC" font-size="14" fill="#6F756F">read intent</text>
+              <text x="14" y="106" font-family="Noto Sans SC" font-size="14" fill="#6F756F">decompose · write code</text>
+              <line x1="14" y1="130" x2="266" y2="130" stroke="#D6D7CF"/>
+              <text x="14" y="160" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">22 min</text>
+              <text x="14" y="180" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">AI autonomous</text>
+            </g>
+            <g transform="translate(610, 80)">
+              <rect width="280" height="200" fill="#FFFFFF" stroke="#1F2421"/>
+              <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">STEP 3 · L0</text>
+              <text x="14" y="60" font-size="22" font-weight="600">gates + tests</text>
+              <text x="14" y="86" font-family="Noto Sans SC" font-size="14" fill="#6F756F">CI/CD · contract check</text>
+              <text x="14" y="106" font-family="Noto Sans SC" font-size="14" fill="#6F756F">3 fails → auto-fix</text>
+              <line x1="14" y1="130" x2="266" y2="130" stroke="#D6D7CF"/>
+              <text x="14" y="160" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">9 min</text>
+              <text x="14" y="180" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">system · auto</text>
+            </g>
+            <g transform="translate(915, 80)">
+              <rect width="280" height="200" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/>
+              <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">STEP 4 · L3 GATE</text>
+              <text x="14" y="60" font-size="22" font-weight="600">human PR review</text>
+              <text x="14" y="86" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">R3 · cross-domain</text>
+              <text x="14" y="106" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">5 evidence · 1-click release</text>
+              <line x1="14" y1="130" x2="266" y2="130" stroke="#4F7A4D" stroke-dasharray="3 3"/>
+              <text x="14" y="160" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">5 min</text>
+              <text x="14" y="180" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D">human · gate</text>
+            </g>
+            <g transform="translate(1220, 80)">
+              <rect width="280" height="200" fill="#1F2421"/>
+              <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#9DBF95" letter-spacing="0.14em">STEP 5 · L1</text>
+              <text x="14" y="60" font-size="22" font-weight="600" fill="#FFFFFF">live · enter FSM</text>
+              <text x="14" y="86" font-family="Noto Sans SC" font-size="14" fill="#9A9F99">candidate → asset</text>
+              <text x="14" y="106" font-family="Noto Sans SC" font-size="14" fill="#9A9F99">observe 30d</text>
+              <line x1="14" y1="130" x2="266" y2="130" stroke="#3A3F3A"/>
+              <text x="14" y="160" font-family="var(--f-mono)" font-size="11" fill="#9DBF95">continuous</text>
+              <text x="14" y="180" font-family="var(--f-mono)" font-size="11" fill="#9DBF95">system · self-evolve</text>
+            </g>
+            <!-- arrows -->
+            <g stroke="#4F7A4D" stroke-width="2" fill="none">
+              <line x1="280" y1="180" x2="305" y2="180" marker-end="url(#m11a)"/>
+              <line x1="585" y1="180" x2="610" y2="180" marker-end="url(#m11a)"/>
+              <line x1="890" y1="180" x2="915" y2="180" marker-end="url(#m11a)"/>
+              <line x1="1195" y1="180" x2="1220" y2="180" marker-end="url(#m11a)"/>
+            </g>
+          </g>
+          <!-- bottom: time -->
+          <g transform="translate(0, 320)">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="13" letter-spacing="0.16em" fill="#6F756F">TOTAL · 39 MIN HUMAN-BLOCKING + ∞ SYSTEM-AUTO</text>
+            <line x1="0" y1="14" x2="1500" y2="14" stroke="#D6D7CF"/>
+            <text x="0" y="44" font-family="Noto Sans SC" font-size="20" font-weight="500" fill="#1F2421">Same requirement · traditional flow: 3-week scheduling + 4 meetings + 2 reworks</text>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:14px; border-top:1px solid var(--rule); font-style:italic; color:var(--ink-2); font-size:22px;">L0 → L1 → L2 → L3 are not phases, they are collaboration — every layer works at the same time</div>
+    </div>
+    <div class="chrome-bl">11 / 15</div>
+    <div class="chrome-br">→ ANTI</div>
+  </section>
+
+  <!-- 12. ANTI-PATTERNS — diagram: stage × failure mode -->
+  <section data-label="12 Anti-Patterns">
+    <div class="chrome-tl">§ BOUNDARY</div>
+    <div class="chrome-tr">ANTI-PATTERNS</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Boundary</div>
+      <h2 class="title-md" style="margin-top:14px;">Anti-Patterns · When to stop</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">Every leap has failure modes · knowing boundaries matters more than knowing methods</p>
+      <div style="flex:1; margin-top:24px;">
+        <svg viewBox="0 0 1700 540" class="diagram">
+          <defs>
+            <marker id="m12a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#4F7A4D"/></marker>
+            <marker id="m12r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L8,5 L0,10 z" fill="#C49A6C"/></marker>
+          </defs>
+          <!-- stage axis (X) -->
+          <g font-family="Noto Sans SC">
+            <line x1="120" y1="450" x2="1620" y2="450" stroke="#1F2421" stroke-width="1.5"/>
+            <g text-anchor="middle" font-family="var(--f-mono)" font-size="13" letter-spacing="0.18em" fill="#6F756F">
+              <text x="240" y="478">L0</text>
+              <text x="600" y="478">L1</text>
+              <text x="960" y="478">L2</text>
+              <text x="1320" y="478">L3</text>
+            </g>
+            <g text-anchor="middle" font-size="14" fill="#1F2421">
+              <text x="240" y="500">Gravity Field</text>
+              <text x="600" y="500">State Visible</text>
+              <text x="960" y="500">Intent Expressible</text>
+              <text x="1320" y="500">Autonomous Loop</text>
+            </g>
+            <text x="1640" y="455" font-family="var(--f-mono)" font-size="11" fill="#6F756F">stage →</text>
+          </g>
+          <!-- severity axis (Y) -->
+          <g font-family="Noto Sans SC">
+            <line x1="120" y1="60" x2="120" y2="450" stroke="#1F2421" stroke-width="1.5"/>
+            <g font-family="var(--f-mono)" font-size="11" fill="#6F756F" letter-spacing="0.14em" text-anchor="end">
+              <text x="108" y="100">REVERSIBLE</text>
+              <text x="108" y="240">SYSTEMIC</text>
+              <text x="108" y="380">CATASTROPHIC</text>
+            </g>
+            <text x="80" y="48" font-family="var(--f-mono)" font-size="11" fill="#6F756F" letter-spacing="0.14em">↑ consequence</text>
+            <line x1="120" y1="170" x2="1620" y2="170" stroke="#D6D7CF" stroke-dasharray="3 4"/>
+            <line x1="120" y1="310" x2="1620" y2="310" stroke="#D6D7CF" stroke-dasharray="3 4"/>
+          </g>
+          <!-- ANTI-PATTERN 01 · Over-governance (L0/L1, reversible) -->
+          <g transform="translate(360, 80)" font-family="Noto Sans SC">
+            <rect width="240" height="140" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+            <rect width="240" height="32" fill="#EEF2EA"/>
+            <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">A1 · Over-governance</text>
+            <text x="14" y="64" font-size="20" font-weight="600">gates > coding</text>
+            <text x="14" y="92" font-size="13" fill="#6F756F">experimental forced full gates</text>
+            <text x="14" y="112" font-size="13" fill="#6F756F">governance time > 30%</text>
+            <text x="14" y="132" font-family="var(--f-mono)" font-size="11" fill="#C49A6C">fix → tier the gates</text>
+          </g>
+          <!-- ANTI-PATTERN 02 · intent≠execute (L2, systemic) -->
+          <g transform="translate(840, 220)" font-family="Noto Sans SC">
+            <rect width="240" height="140" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+            <rect width="240" height="32" fill="#EEF2EA"/>
+            <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">A2 · Intent ≠ Execution</text>
+            <text x="14" y="64" font-size="20" font-weight="600">declared but unverified</text>
+            <text x="14" y="92" font-size="13" fill="#6F756F">intent.yaml unchecked</text>
+            <text x="14" y="112" font-size="13" fill="#6F756F">declaration becomes decoration</text>
+            <text x="14" y="132" font-family="var(--f-mono)" font-size="11" fill="#C49A6C">fix → bind fields to verifiers</text>
+          </g>
+          <!-- ANTI-PATTERN 03 · Gradient Breach (L3, catastrophic) -->
+          <g transform="translate(1200, 360)" font-family="Noto Sans SC">
+            <rect width="240" height="140" fill="#1F2421"/>
+            <rect width="240" height="32" fill="#4F7A4D"/>
+            <text x="14" y="22" font-family="var(--f-mono)" font-size="11" fill="#FFFFFF" letter-spacing="0.14em">A3 · Gradient Breach</text>
+            <text x="14" y="64" font-size="20" font-weight="600" fill="#FFFFFF">Over-delegated</text>
+            <text x="14" y="92" font-size="13" fill="#9DBF95">R4/R5 also to Agent</text>
+            <text x="14" y="112" font-size="13" fill="#9DBF95">irreversible · disaster</text>
+            <text x="14" y="132" font-family="var(--f-mono)" font-size="11" fill="#C49A6C">fix → R5 never granted</text>
+          </g>
+          <!-- annotation: not solved -->
+          <g transform="translate(140, 80)" font-family="Noto Sans SC">
+            <rect width="200" height="140" fill="none" stroke="#9A9F99" stroke-dasharray="4 4"/>
+            <text x="14" y="24" font-family="var(--f-mono)" font-size="11" fill="#9A9F99" letter-spacing="0.14em">Out of governance scope</text>
+            <text x="14" y="56" font-size="14" fill="#6F756F">wrong business direction</text>
+            <text x="14" y="78" font-size="14" fill="#6F756F">org collaboration issue</text>
+            <text x="14" y="100" font-size="14" fill="#6F756F">creative work</text>
+            <text x="14" y="124" font-family="var(--f-mono)" font-size="11" fill="#9A9F99">— these are human territory —</text>
+          </g>
+          <!-- diagonal dashed connector showing risk increases with stage -->
+          <line x1="240" y1="380" x2="1320" y2="100" stroke="#C49A6C" stroke-width="1" stroke-dasharray="2 6" stroke-opacity="0.4"/>
+          <text x="1450" y="80" font-family="var(--f-mono)" font-size="11" fill="#C49A6C" font-style="italic">higher tier · greater breach cost</text>
+        </svg>
+      </div>
+    </div>
+    <div class="chrome-bl">12 / 15</div>
+    <div class="chrome-br">→ ROLES</div>
+  </section>
+  <!-- 14. NEW ROLES — flow not labels -->
+  <section data-label="13 Role Evolution">
+    <div class="chrome-tl">§ ROLE FLOW</div>
+    <div class="chrome-tr">PEOPLE</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Where humans go</div>
+      <h2 class="title-md" style="margin-top:14px;">Labor flows toward higher value</h2>
+      <div style="flex:1; margin-top:32px;">
+        <svg viewBox="0 0 1700 480" class="diagram">
+          <defs>
+            <marker id="m14a" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L12,7 L0,14 z" fill="#4F7A4D"/></marker>
+          </defs>
+          <!-- left: today's allocation -->
+          <g transform="translate(60, 40)" font-family="Noto Sans SC">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="13" letter-spacing="0.18em" fill="#6F756F">TODAY · engineer time allocation</text>
+            <line x1="0" y1="14" x2="640" y2="14" stroke="#D6D7CF"/>
+            <g transform="translate(0, 30)">
+              <rect width="640" height="44" fill="#EAEAE3"/>
+              <rect width="160" height="44" fill="#9A9F99"/>
+              <text x="80" y="28" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="500">design 25%</text>
+              <rect x="160" width="320" height="44" fill="#C49A6C"/>
+              <text x="320" y="28" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="500">CRUD · fix typo · tweak deps 50%</text>
+              <rect x="480" width="160" height="44" fill="#6F756F"/>
+              <text x="560" y="28" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="500">meetings 25%</text>
+            </g>
+            <text x="0" y="110" font-size="20" font-weight="500" fill="#1F2421">75% time in alienated labor</text>
+            <text x="0" y="138" font-family="var(--f-mono)" font-size="13" fill="#6F756F">high V · low M</text>
+          </g>
+          <!-- arrow -->
+          <g transform="translate(740, 100)">
+            <line x1="0" y1="0" x2="180" y2="0" stroke="#4F7A4D" stroke-width="3" marker-end="url(#m14a)"/>
+            <text x="90" y="-20" text-anchor="middle" font-family="var(--f-mono)" font-size="13" fill="#4F7A4D" letter-spacing="0.16em">AI takes over</text>
+            <text x="90" y="34" text-anchor="middle" font-family="Noto Sans SC" font-size="14" fill="#4A4F4B">L1+L2+L3</text>
+          </g>
+          <!-- right: tomorrow's allocation -->
+          <g transform="translate(960, 40)" font-family="Noto Sans SC">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="13" letter-spacing="0.18em" fill="#4F7A4D">TOMORROW · engineer time allocation</text>
+            <line x1="0" y1="14" x2="640" y2="14" stroke="#D6D7CF"/>
+            <g transform="translate(0, 30)">
+              <rect width="640" height="44" fill="#EEF2EA"/>
+              <rect width="320" height="44" fill="#4F7A4D"/>
+              <text x="160" y="28" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="500">system design · intent definition 50%</text>
+              <rect x="320" width="160" height="44" fill="#7FA877"/>
+              <text x="400" y="28" text-anchor="middle" font-size="14" fill="#FFFFFF" font-weight="500">gating · audit 25%</text>
+              <rect x="480" width="160" height="44" fill="#9DBF95"/>
+              <text x="560" y="28" text-anchor="middle" font-size="14" fill="#1F2421" font-weight="500">research · exploration 25%</text>
+            </g>
+            <text x="0" y="110" font-size="20" font-weight="500" fill="#1F2421">100% time in creation</text>
+            <text x="0" y="138" font-family="var(--f-mono)" font-size="13" fill="#4F7A4D">high V · high M</text>
+          </g>
+          <!-- bottom: 4 new roles -->
+          <g transform="translate(60, 240)" font-family="Noto Sans SC">
+            <text x="0" y="0" font-family="var(--f-mono)" font-size="13" letter-spacing="0.18em" fill="#6F756F">Four new roles · every team needs them</text>
+            <line x1="0" y1="14" x2="1580" y2="14" stroke="#D6D7CF"/>
+            <g transform="translate(0, 40)"><rect width="370" height="170" fill="#FFFFFF" stroke="#1F2421"/><text x="14" y="30" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">01 · ARCHITECT</text><text x="14" y="68" font-size="22" font-weight="600">Framework Architect</text><text x="14" y="100" font-size="14" fill="#6F756F">design L0 gravity field</text><text x="14" y="124" font-size="14" fill="#6F756F">rules as capital</text></g>
+            <g transform="translate(400, 40)"><rect width="370" height="170" fill="#FFFFFF" stroke="#1F2421"/><text x="14" y="30" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">02 · INTENT DESIGNER</text><text x="14" y="68" font-size="22" font-weight="600">Intent Designer</text><text x="14" y="100" font-size="14" fill="#6F756F">write intent files</text><text x="14" y="124" font-size="14" fill="#6F756F">translate business into declarations</text></g>
+            <g transform="translate(800, 40)"><rect width="370" height="170" fill="#FFFFFF" stroke="#1F2421"/><text x="14" y="30" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">03 · HARNESS ENGINEER</text><text x="14" y="68" font-size="22" font-weight="600">Harness Engineer</text><text x="14" y="100" font-size="14" fill="#6F756F">build Agent engineering shell</text><text x="14" y="124" font-size="14" fill="#6F756F">manage heartbeat cadence</text></g>
+            <g transform="translate(1200, 40)"><rect width="380" height="170" fill="#D9E5D2" stroke="#4F7A4D" stroke-width="2"/><text x="14" y="30" font-family="var(--f-mono)" font-size="11" fill="#4F7A4D" letter-spacing="0.14em">04 · AUDITOR</text><text x="14" y="68" font-size="22" font-weight="600">AI Decision Auditor</text><text x="14" y="100" font-size="14" fill="#4A4F4B">independent of tuning engineer</text><text x="14" y="124" font-size="14" fill="#4A4F4B">guard R3-R5 red line</text></g>
+          </g>
+        </svg>
+      </div>
+    </div>
+    <div class="chrome-bl">13 / 15</div>
+    <div class="chrome-br">→ FUTURE</div>
+  </section>
+  <!-- 13. FUTURE SHAPE — visionary, calmer -->
+  <section data-label="14 Future Shape">
+    <div class="chrome-tl">§ THE FUTURE</div>
+    <div class="chrome-tr">2030 +</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">The Future Shape</div>
+      <h2 class="title-md" style="margin-top:14px;">2030 · Engineering is no longer about writing code</h2>
+      <div style="flex:1; margin-top:24px;">
+        <svg viewBox="0 0 1700 460" class="diagram">
+          <defs>
+            <radialGradient id="orb" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0%" stop-color="#9DBF95" stop-opacity="0.6"/>
+              <stop offset="60%" stop-color="#4F7A4D" stop-opacity="0.3"/>
+              <stop offset="100%" stop-color="#1F2421" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <!-- center orb = system -->
+          <circle cx="850" cy="230" r="240" fill="url(#orb)"/>
+          <circle cx="850" cy="230" r="120" fill="none" stroke="#4F7A4D" stroke-width="1.5" stroke-dasharray="4 6"/>
+          <circle cx="850" cy="230" r="180" fill="none" stroke="#4F7A4D" stroke-width="1" stroke-dasharray="2 8" stroke-opacity="0.6"/>
+          <!-- center text -->
+          <g transform="translate(850, 230)" font-family="Noto Sans SC" text-anchor="middle">
+            <text y="-6" font-family="var(--f-mono)" font-size="13" letter-spacing="0.20em" fill="#4F7A4D">SELF-EVOLVING</text>
+            <text y="32" font-size="34" font-weight="700" fill="#1F2421">Self-Governing System</text>
+            <text y="64" font-family="var(--f-mono)" font-size="14" fill="#6F756F">Code as Living Infrastructure</text>
+          </g>
+          <!-- orbiting nodes -->
+          <g font-family="Noto Sans SC" text-anchor="middle">
+            <g transform="translate(450, 130)">
+              <circle r="50" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+              <text y="-2" font-family="var(--f-mono)" font-size="10" fill="#4F7A4D" letter-spacing="0.14em">HUMAN</text>
+              <text y="18" font-size="16" font-weight="600">paint intent</text>
+            </g>
+            <g transform="translate(1250, 130)">
+              <circle r="50" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+              <text y="-2" font-family="var(--f-mono)" font-size="10" fill="#4F7A4D" letter-spacing="0.14em">AI</text>
+              <text y="18" font-size="16" font-weight="600">self-converge</text>
+            </g>
+            <g transform="translate(450, 360)">
+              <circle r="50" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+              <text y="-2" font-family="var(--f-mono)" font-size="10" fill="#4F7A4D" letter-spacing="0.14em">SYSTEM</text>
+              <text y="18" font-size="16" font-weight="600">continuously evolves</text>
+            </g>
+            <g transform="translate(1250, 360)">
+              <circle r="50" fill="#FFFFFF" stroke="#1F2421" stroke-width="1.5"/>
+              <text y="-2" font-family="var(--f-mono)" font-size="10" fill="#4F7A4D" letter-spacing="0.14em">VALUE</text>
+              <text y="18" font-size="16" font-weight="600">compound accumulation</text>
+            </g>
+          </g>
+          <!-- connection lines -->
+          <g stroke="#4F7A4D" stroke-width="1" stroke-dasharray="3 5" fill="none" stroke-opacity="0.6">
+            <line x1="500" y1="130" x2="730" y2="180"/>
+            <line x1="1200" y1="130" x2="970" y2="180"/>
+            <line x1="500" y1="360" x2="730" y2="290"/>
+            <line x1="1200" y1="360" x2="970" y2="290"/>
+          </g>
+        </svg>
+      </div>
+      <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); font-size:24px; color:var(--ink-2); line-height:1.5;">
+        Software is no longer "maintained" · it <strong>continuously evolves</strong>.<br/>
+        Engineers no longer "write code" · they <strong>steward a system that grows itself</strong>.
+      </div>
+    </div>
+    <div class="chrome-bl">14 / 15</div>
+    <div class="chrome-br">→ VALUE</div>
+  </section>
+
+  <!-- 15. VALUE TRINITY+ — Enterprise / Individual / AI · finale -->
+  <section data-label="15 Value Finale">
+    <div class="chrome-tl">§ ∞ · VALUE FINALE</div>
+    <div class="chrome-tr">FOR WHOM · WHY IT MATTERS</div>
+    <div class="rule-top"></div>
+    <div class="rule-bottom"></div>
+    <div class="frame">
+      <div class="eyebrow">Value Finale · What is this all for</div>
+      <h2 class="title-md" style="margin-top:14px;">Liberate productivity · return labor to creation</h2>
+      <p class="body-md" style="margin-top:14px; color:var(--ink-3);">Three subjects · three "work" philosophies — AI works every time · humans work everywhere & every status</p>
+
+      <div style="flex:1; margin-top:32px; display:grid; grid-template-columns: 1fr 1fr 1fr; gap:32px;">
+
+        <!-- ENTERPRISE -->
+        <div style="background:#FFFFFF; border:1px solid var(--rule); display:flex; flex-direction:column;">
+          <div style="height:88px; background:linear-gradient(135deg, #2D3A2C 0%, #4F7A4D 100%); position:relative; display:flex; align-items:center; padding:0 28px;">
+            <svg viewBox="0 0 60 40" style="width:60px; height:40px;">
+              <g stroke="#FFFFFF" stroke-width="1.6" fill="none">
+                <rect x="6" y="10" width="14" height="26"/>
+                <rect x="24" y="18" width="14" height="18"/>
+                <rect x="42" y="6" width="12" height="30"/>
+              </g>
+            </svg>
+            <div style="margin-left:18px; color:#FFFFFF; font-family:var(--f-mono); font-size:13px; letter-spacing:0.18em;">ENTERPRISE</div>
+          </div>
+          <div style="padding:28px 26px; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <div style="font-size:30px; font-weight:600; line-height:1.2;">Enterprise</div>
+            <div class="label-mono" style="color:var(--green-deep);">Asset compound · anti-entropy</div>
+            <ul style="font-size:17px; line-height:1.6; color:var(--ink-2); padding-left:20px; margin:0;">
+              <li><strong>Asset health rate</strong>replaces lines-of-code · the new North Star</li>
+              <li><strong>Constant delivery speed</strong>· no decay with codebase age</li>
+              <li><strong>Failure rate ↓ 50%</strong> · onboarding ↓ 60%</li>
+              <li>Self-feedback · domain experts directly optimize the system</li>
+            </ul>
+            <div style="margin-top:auto; height:1px; background:var(--rule);"></div>
+            <div style="font-family:var(--f-mono); font-size:12px; color:var(--green-deep); letter-spacing:0.16em;">COMPOUND · ACCELERATE</div>
+          </div>
+        </div>
+
+        <!-- INDIVIDUAL -->
+        <div style="background:#FFFFFF; border:1px solid var(--rule); display:flex; flex-direction:column;">
+          <div style="height:88px; background:linear-gradient(135deg, #9DBF95 0%, #D9E5D2 100%); position:relative; display:flex; align-items:center; padding:0 28px;">
+            <svg viewBox="0 0 60 40" style="width:60px; height:40px;">
+              <g stroke="#1F2421" stroke-width="1.6" fill="none">
+                <circle cx="30" cy="14" r="7"/>
+                <path d="M 16 36 Q 30 22 44 36"/>
+                <path d="M 14 14 L 6 22 M 46 14 L 54 22" stroke-dasharray="2 2"/>
+                <circle cx="6" cy="22" r="2.5" fill="#1F2421"/>
+                <circle cx="54" cy="22" r="2.5" fill="#1F2421"/>
+              </g>
+            </svg>
+            <div style="margin-left:18px; color:#1F2421; font-family:var(--f-mono); font-size:13px; letter-spacing:0.18em;">INDIVIDUAL</div>
+          </div>
+          <div style="padding:28px 26px; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <div style="font-size:30px; font-weight:600; line-height:1.2;">Individual</div>
+            <div class="label-mono" style="color:var(--green-deep);">work everywhere · every status</div>
+            <ul style="font-size:17px; line-height:1.6; color:var(--ink-2); padding-left:20px; margin:0;">
+              <li><strong>work everywhere</strong>· workspace travels anywhere</li>
+              <li><strong>work every status</strong>· productive in any status</li>
+              <li><strong>Time to dive into business</strong>· truly understand users</li>
+              <li><strong>Workers in every industry</strong>optimize their own systems · feeding back to enterprise and country</li>
+            </ul>
+            <div style="margin-top:auto; height:1px; background:var(--rule);"></div>
+            <div style="font-family:var(--f-mono); font-size:12px; color:var(--green-deep); letter-spacing:0.16em;">LIBERATE · CREATE</div>
+          </div>
+        </div>
+
+        <!-- AI -->
+        <div style="background:#1F2421; color:#FFFFFF; display:flex; flex-direction:column;">
+          <div style="height:88px; background:#0F1311; position:relative; display:flex; align-items:center; padding:0 28px; border-bottom:1px solid #4F7A4D;">
+            <svg viewBox="0 0 60 40" style="width:60px; height:40px;">
+              <g stroke="#9DBF95" stroke-width="1.6" fill="none">
+                <circle cx="30" cy="20" r="14"/>
+                <path d="M 30 6 L 30 34 M 16 20 L 44 20"/>
+                <circle cx="30" cy="20" r="3" fill="#9DBF95"/>
+              </g>
+            </svg>
+            <div style="margin-left:18px; color:#9DBF95; font-family:var(--f-mono); font-size:13px; letter-spacing:0.18em;">AI</div>
+          </div>
+          <div style="padding:28px 26px; display:flex; flex-direction:column; gap:14px; flex:1;">
+            <div style="font-size:30px; font-weight:600; line-height:1.2; color:#FFFFFF;">AI</div>
+            <div style="font-family:var(--f-mono); font-size:13px; color:#9DBF95; letter-spacing:0.14em;">WORK · EVERYTIME</div>
+            <ul style="font-size:17px; line-height:1.6; color:#D9E5D2; padding-left:20px; margin:0;">
+              <li><strong style="color:#FFFFFF;">7×24</strong> never rests</li>
+              <li><strong style="color:#FFFFFF;">In sandbox</strong> reversible experiments</li>
+              <li><strong style="color:#FFFFFF;">gate and execute</strong> rather than decide</li>
+              <li><strong style="color:#FFFFFF;">Amplify humans</strong> rather than replace them</li>
+            </ul>
+            <div style="margin-top:auto; height:1px; background:#4F7A4D;"></div>
+            <div style="font-family:var(--f-mono); font-size:12px; color:#9DBF95; letter-spacing:0.16em;">AMPLIFY · NEVER REPLACE</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- closing band -->
+      <div style="margin-top:28px; padding:24px 32px; background:#EEF2EA; border-left:4px solid var(--green-deep); display:flex; align-items:center; justify-content:space-between;">
+        <div style="font-size:28px; font-weight:600; color:var(--ink); line-height:1.4;">
+          AI is not here to<span style="color:var(--green-deep);">replace</span>engineers · it is here to<span style="color:var(--green-deep);">liberate</span>engineers
+        </div>
+        <div style="font-family:var(--f-mono); font-size:13px; color:var(--ink-3); letter-spacing:0.18em;">— END · 2026 —</div>
+      </div>
+    </div>
+    <div class="chrome-bl">15 / 15 · END</div>
+    <div class="chrome-br">∞</div>
+  </section>
+
+</deck-stage>
+
+</body>
+</html>
