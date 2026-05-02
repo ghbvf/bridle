@@ -144,6 +144,27 @@ Bridle 给出的答案：**人在期望状态定义环路里，AI 在持续收�
 
 ---
 
+## ⚠️ AI 生成免责声明
+
+> 本仓库的**全部内容**——方法论文档、起步手册、配套幻灯片、源代码、配置文件、本 README——**均由 AI（Claude）协作生成**，未经过任何团队的真实工程实践完整验证。
+
+具体含义：
+
+- **探索性 ≠ 最佳实践**：本方法论是一个尚未被多组织验证的**理论框架**，不是经过实战检验的工业标准
+- **真实证据 > AI 推荐**：当本仓库的建议与你团队的实际经验冲突时，请相信你的经验
+- **不构成专业建议**：不应作为关键工程决策、合规判断、商业战略的唯一依据
+- **引用前请核实**：所有数据点（如"AI 代码故障率 3×"、"DORA 高性能水位"等）都应回到原始来源核实
+
+请把本仓库当作**讨论起点**，而非**最终答案**。欢迎以 Issue / PR 形式提供：真实采用案例（推翻或验证某条机制）、反模式补充、工具替代方案、度量数据。
+
+---
+
+## License
+
+[MIT License](./LICENSE) · Copyright © 2026 ghbvf · Bridle Project
+
+---
+
 <a id="english"></a>
 <!-- Language: [中文](#bridle--驭码) | English -->
 
@@ -284,6 +305,21 @@ Bridle's answer: **humans live in the desired-state definition loop; AI lives in
 
 ---
 
+## ⚠️ AI-Generated Content Disclaimer
+
+> **All content in this repository** — methodology docs, bootstrap handbook, companion deck, source code, configuration, this README — was **generated collaboratively with AI (Claude)** and has not been fully validated by any team's real engineering practice.
+
+What this means concretely:
+
+- **Exploratory ≠ best practice**: this methodology is a **theoretical framework** not yet validated across multiple organizations, not a battle-tested industry standard
+- **Real evidence > AI recommendation**: when this repo's advice conflicts with your team's lived experience, trust your experience
+- **Not professional advice**: do not use as the sole basis for critical engineering decisions, compliance judgments, or business strategy
+- **Verify before citing**: all data points (e.g. "AI code defect rate 3×", "DORA high-performance thresholds") should be re-verified against original sources
+
+Treat this repo as a **starting point for discussion**, not the **final answer**. Issues and PRs welcome with: real adoption cases (refuting or validating mechanisms), anti-pattern additions, tool alternatives, measurement data.
+
+---
+
 ## License
 
-TBD (suggested: CC BY-SA 4.0 for methodology text; MIT for any future code implementation).
+[MIT License](./LICENSE) · Copyright © 2026 ghbvf · Bridle Project
